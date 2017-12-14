@@ -1,1 +1,1 @@
-include ':app', ':libcarouselbannar'
+include ':example', ':libcarouselbannar'
