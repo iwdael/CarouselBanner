@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         banner.initBanner(list, new CarouselImageFactory() {
             @Override
             public void onLoadFactory(String url, ImageView view) {
-                OnHttp.imageLoader().url(url).view(view).build();
+                OnHttp.imageLoader().url(url).view(view).defaultId(R.mipmap.ic_launcher).build();
             }
         }, new OnCarouselBannarListener() {
             @Override
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         banner2.initBanner(list, new CarouselImageFactory() {
             @Override
             public void onLoadFactory(String url, ImageView view) {
-                OnHttp.imageLoader().url(url).view(view).build();
+                OnHttp.imageLoader().url(url).view(view).defaultId(R.mipmap.ic_launcher).build();
             }
         });
 

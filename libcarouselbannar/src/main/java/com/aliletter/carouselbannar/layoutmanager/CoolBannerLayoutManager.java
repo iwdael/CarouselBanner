@@ -1,9 +1,12 @@
 package com.aliletter.carouselbannar.layoutmanager;
 
+import android.content.Context;
 import android.graphics.PointF;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSmoothScroller;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -14,9 +17,10 @@ import static android.support.v7.widget.RecyclerView.NO_POSITION;
  * Github: http://github.com/aliletter
  * Email: 4884280@qq.com
  */
-public class BannerLayoutManager extends RecyclerView.LayoutManager implements RecyclerView.SmoothScroller.ScrollVectorProvider {
+public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implements RecyclerView.SmoothScroller.ScrollVectorProvider {
 
     private static final float SCALE_RATE = 1.2f;
+    private   float speedPerPixelMillisecond;
     private int mOrientation = HORIZONTAL;
 
     private static final int HORIZONTAL = OrientationHelper.HORIZONTAL;
@@ -68,16 +72,18 @@ public class BannerLayoutManager extends RecyclerView.LayoutManager implements R
     private int mRightItems;
 
 
-    public BannerLayoutManager() {
-        this(HORIZONTAL, 0);
+    public CoolBannerLayoutManager() {
+        this(HORIZONTAL, 0,0.8f);
     }
 
 
-    public BannerLayoutManager(int orientation, int itemSpace) {
+    public CoolBannerLayoutManager(int orientation, int itemSpace,float speedPerPixelMillisecond) {
         this.itemSpace = itemSpace;
         setOrientation(orientation);
         setAutoMeasureEnabled(true);
+        this.speedPerPixelMillisecond=speedPerPixelMillisecond;
     }
+
 
     /**
      * @return the mInterval of each item's mOffset
@@ -114,7 +120,6 @@ public class BannerLayoutManager extends RecyclerView.LayoutManager implements R
     }
 
 
-
     /**
      * @return true if {@link #getOrientation()} is {@link #HORIZONTAL}
      */
@@ -142,7 +147,7 @@ public class BannerLayoutManager extends RecyclerView.LayoutManager implements R
     }
 
     /**
-     * Sets the orientation of the layout. {@link BannerLayoutManager}
+     * Sets the orientation of the layout. {@link CoolBannerLayoutManager}
      * will do its best to keep scroll position.
      *
      * @param orientation {@link #HORIZONTAL} or {@link #VERTICAL}
@@ -179,10 +184,39 @@ public class BannerLayoutManager extends RecyclerView.LayoutManager implements R
 
     @Override
     public void smoothScrollToPosition(RecyclerView recyclerView, RecyclerView.State state, int position) {
-        LinearSmoothScroller linearSmoothScroller = new LinearSmoothScroller(recyclerView.getContext());
-        linearSmoothScroller.setTargetPosition(position);
-        startSmoothScroll(linearSmoothScroller);
+        CenterSmoothScroller smoothScroller = new CenterSmoothScroller(recyclerView.getContext());
+        smoothScroller.setTargetPosition(position);
+        startSmoothScroll(smoothScroller);
     }
+
+
+    private class CenterSmoothScroller extends LinearSmoothScroller {
+
+        CenterSmoothScroller(Context context) {
+            super(context);
+        }
+
+        @Nullable
+        @Override
+        public PointF computeScrollVectorForPosition(int targetPosition) {
+            return CoolBannerLayoutManager.this.computeScrollVectorForPosition(targetPosition);
+        }
+
+        @Override
+        public int calculateDtToFit(int viewStart, int viewEnd, int boxStart, int boxEnd, int snapPreference) {
+            return (boxStart + (boxEnd - boxStart) / 2) - (viewStart + (viewEnd - viewStart) / 2);
+        }
+
+        protected float calculateSpeedPerPixel(DisplayMetrics displayMetrics) {
+            return speedPerPixelMillisecond;
+        }
+
+        @Override
+        protected int getVerticalSnapPreference() {
+            return SNAP_TO_START;
+        }
+    }
+
 
     public PointF computeScrollVectorForPosition(int targetPosition) {
         if (getChildCount() == 0) {

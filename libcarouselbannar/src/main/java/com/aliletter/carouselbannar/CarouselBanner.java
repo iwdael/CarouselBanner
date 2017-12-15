@@ -9,6 +9,8 @@ import com.aliletter.carouselbannar.adapter.CarouselAdapter;
 import com.aliletter.carouselbannar.base.CarouselBannerBase;
 import com.aliletter.carouselbannar.interfaces.CarouselImageFactory;
 import com.aliletter.carouselbannar.interfaces.OnCarouselBannarListener;
+import com.aliletter.carouselbannar.layoutmanager.BannarLayoutManager;
+
 import java.util.List;
 
 /**
@@ -16,7 +18,7 @@ import java.util.List;
  * Github: http://github.com/aliletter
  * Email: 4884280@qq.com
  */
-public class CarouselBanner extends CarouselBannerBase<LinearLayoutManager, CarouselAdapter> {
+public class CarouselBanner extends CarouselBannerBase<BannarLayoutManager, CarouselAdapter> {
 
     public CarouselBanner(Context context) {
         this(context, null);
@@ -65,8 +67,8 @@ public class CarouselBanner extends CarouselBannerBase<LinearLayoutManager, Caro
     }
 
     @Override
-    protected LinearLayoutManager getLayoutManager(Context context, int orientation) {
-        return new LinearLayoutManager(context, orientation, false);
+    protected BannarLayoutManager getLayoutManager(Context context, int orientation) {
+        return new BannarLayoutManager(context, orientation, false);
     }
 
     @Override

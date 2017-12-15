@@ -45,6 +45,7 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     protected Drawable mSelectedDrawable;
     protected Drawable mUnselectedDrawable;
     protected IndicatorAdapter indicatorAdapter;
+    protected float speedPerPixelMillisecond;
     protected int indicatorMargin;//指示器间距
 
     protected RecyclerView mRecyclerView;
@@ -97,6 +98,7 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
         isAutoPlaying = a.getBoolean(R.styleable.CarouselBannerBase_autoPlaying, true);
         mSelectedDrawable = a.getDrawable(R.styleable.CarouselBannerBase_indicatorSelectedSrc);
         mUnselectedDrawable = a.getDrawable(R.styleable.CarouselBannerBase_indicatorUnselectedSrc);
+        speedPerPixelMillisecond = a.getFloat(R.styleable.CarouselBannerBase_speedPerPixelMillisecond, 0.8f);
         if (mSelectedDrawable == null) {
             //绘制默认选中状态图形
             GradientDrawable selectedGradientDrawable = new GradientDrawable();
@@ -194,7 +196,7 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
      *
      * @param playing 开始播放
      */
-    protected synchronized void setPlaying(boolean playing) {
+    protected void setPlaying(boolean playing) {
         if (isAutoPlaying && hasInit) {
             if (!isPlaying && playing && adapter != null && adapter.getItemCount() > 2) {
                 mHandler.sendEmptyMessageDelayed(WHAT_AUTO_PLAY, autoPlayDuration);
@@ -368,7 +370,7 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     /**
      * 改变导航的指示点
      */
-    protected  void refreshIndicator() {
+    protected void refreshIndicator() {
         if (showIndicator && bannerSize > 1) {
             indicatorAdapter.setPosition(currentIndex % bannerSize);
             indicatorAdapter.notifyDataSetChanged();
