@@ -21,6 +21,6 @@ public class CarouselViewHolder extends BaseViewHolder {
         imageView = (ImageView) itemView;
         RecyclerView.LayoutParams params = new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         imageView.setLayoutParams(params);
-        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
     }
 }

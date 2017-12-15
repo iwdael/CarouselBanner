@@ -18,6 +18,4 @@ public class CoolCarouselViewHolder extends BaseViewHolder {
         super(itemView);
         imageView = itemView.findViewById(R.id.image);
     }
-
-
 }
