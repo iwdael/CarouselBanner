@@ -2,7 +2,11 @@ package com.aliletter.carouselbannar.layoutmanager;
 
 import android.support.v7.widget.RecyclerView;
 
-
+/**
+ * Author：alilettter
+ * Github: http://github.com/aliletter
+ * Email: 4884280@qq.com
+ */
 public class CenterScrollListener extends RecyclerView.OnScrollListener {
     private boolean mAutoSet = false;
 

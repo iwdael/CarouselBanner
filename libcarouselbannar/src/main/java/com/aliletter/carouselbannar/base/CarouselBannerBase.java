@@ -25,11 +25,17 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.aliletter.carouselbannar.R;
-import com.aliletter.carouselbannar.adapter.BaseBannerAdapter;
+import com.aliletter.carouselbannar.interfaces.CarouselImageFactory;
+import com.aliletter.carouselbannar.interfaces.OnCarouselBannarListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Author：alilettter
+ * Github: http://github.com/aliletter
+ * Email: 4884280@qq.com
+ */
 public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A extends BaseBannerAdapter> extends FrameLayout {
 
     protected int autoPlayDuration;//刷新间隔时间
@@ -55,7 +61,7 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     protected boolean isAutoPlaying;
     protected List<String> tempUrlList = new ArrayList<>();
 
-    protected OnBannerItemClickListener onBannerItemClickListener;
+    protected OnCarouselBannarListener onBannerItemClickListener;
 
 
     protected Handler mHandler = new Handler(new Handler.Callback() {
@@ -172,7 +178,7 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
 
     protected abstract L getLayoutManager(Context context, int orientation);
 
-    protected abstract A getAdapter(Context context, List<String> list, OnBannerItemClickListener onBannerItemClickListener);
+    protected abstract A getAdapter(List<String> list, CarouselImageFactory factory, OnCarouselBannarListener onBannerItemClickListener);
 
     /**
      * 设置轮播间隔时间
@@ -217,20 +223,20 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
         indicatorContainer.setVisibility(showIndicator ? VISIBLE : GONE);
     }
 
-    public void setOnBannerItemClickListener(OnBannerItemClickListener onBannerItemClickListener) {
+    public void setOnBannerItemClickListener(OnCarouselBannarListener onBannerItemClickListener) {
         this.onBannerItemClickListener = onBannerItemClickListener;
     }
 
     /**
      * 设置轮播数据集
      */
-    public void initBannerImageView(@NonNull List<String> newList, OnBannerItemClickListener onBannerItemClickListener) {
+    public void initBanner(@NonNull List<String> newList, CarouselImageFactory factory, OnCarouselBannarListener onBannerItemClickListener) {
         //解决recyclerView嵌套问题
         if (compareListDifferent(newList, tempUrlList)) {
             hasInit = false;
             setVisibility(VISIBLE);
             setPlaying(false);
-            adapter = getAdapter(getContext(), newList, onBannerItemClickListener);
+            adapter = getAdapter(newList, factory, onBannerItemClickListener);
             mRecyclerView.setAdapter(adapter);
             tempUrlList = newList;
             bannerSize = tempUrlList.size();
@@ -254,8 +260,8 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     /**
      * 设置轮播数据集
      */
-    public void initBannerImageView(@NonNull List<String> newList) {
-        initBannerImageView(newList, null);
+    public void initBanner(@NonNull List<String> newList, CarouselImageFactory factory) {
+        initBanner(newList, factory, null);
     }
 
     @Override
@@ -369,9 +375,6 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
         }
     }
 
-    public interface OnBannerItemClickListener {
-        void onItemClick(int position);
-    }
 
     protected int dp2px(int dp) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, Resources.getSystem().getDisplayMetrics());

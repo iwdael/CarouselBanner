@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CarouselBannar.iml" filepath="$PROJECT_DIR$/CarouselBannar.iml" />
-      <module fileurl="file://$PROJECT_DIR$/example/app.iml" filepath="$PROJECT_DIR$/example/app.iml" />
+      <module fileurl="file://C:\Users\alile\Desktop\CarouselBannar\example\app.iml" filepath="C:\Users\alile\Desktop\CarouselBannar\example\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
       <module fileurl="file://$PROJECT_DIR$/libcarouselbannar/libcarouselbannar.iml" filepath="$PROJECT_DIR$/libcarouselbannar/libcarouselbannar.iml" />
     </modules>
   </component>

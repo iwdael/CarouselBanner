@@ -259,8 +259,7 @@ public abstract class OrientationHelper {
             public int getDecoratedMeasurement(View view) {
                 final RecyclerView.LayoutParams params = (RecyclerView.LayoutParams)
                         view.getLayoutParams();
-                return mLayoutManager.getDecoratedMeasuredWidth(view) + params.leftMargin
-                        + params.rightMargin;
+                return mLayoutManager.getDecoratedMeasuredWidth(view) + params.leftMargin  + params.rightMargin;
             }
 
             @Override

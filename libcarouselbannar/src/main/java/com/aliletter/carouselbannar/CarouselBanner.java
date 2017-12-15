@@ -5,26 +5,30 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
-
-import com.aliletter.carouselbannar.adapter.RecyclerAdapterNormal;
+import com.aliletter.carouselbannar.adapter.CarouselAdapter;
 import com.aliletter.carouselbannar.base.CarouselBannerBase;
-
+import com.aliletter.carouselbannar.interfaces.CarouselImageFactory;
+import com.aliletter.carouselbannar.interfaces.OnCarouselBannarListener;
 import java.util.List;
 
-public class NormalRecyclerViewBanner extends CarouselBannerBase<LinearLayoutManager, RecyclerAdapterNormal> {
+/**
+ * Author：alilettter
+ * Github: http://github.com/aliletter
+ * Email: 4884280@qq.com
+ */
+public class CarouselBanner extends CarouselBannerBase<LinearLayoutManager, CarouselAdapter> {
 
-    public NormalRecyclerViewBanner(Context context) {
+    public CarouselBanner(Context context) {
         this(context, null);
     }
 
-    public NormalRecyclerViewBanner(Context context, AttributeSet attrs) {
+    public CarouselBanner(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public NormalRecyclerViewBanner(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CarouselBanner(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
-
 
     @Override
     protected void onBannerScrolled(RecyclerView recyclerView, int dx, int dy) {
@@ -66,8 +70,8 @@ public class NormalRecyclerViewBanner extends CarouselBannerBase<LinearLayoutMan
     }
 
     @Override
-    protected RecyclerAdapterNormal getAdapter(Context context, List<String> list,OnBannerItemClickListener onBannerItemClickListener) {
-        return new RecyclerAdapterNormal(context, list,onBannerItemClickListener);
+    protected CarouselAdapter getAdapter(List<String> list, CarouselImageFactory factory, OnCarouselBannarListener onBannerItemClickListener) {
+        return new CarouselAdapter(list, factory, onBannerItemClickListener);
     }
 
 

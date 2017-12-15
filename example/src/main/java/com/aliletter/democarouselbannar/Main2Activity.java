@@ -2,16 +2,19 @@ package com.aliletter.democarouselbannar;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.aliletter.carouselbannar.NormalRecyclerViewBanner;
-import com.aliletter.carouselbannar.base.CarouselBannerBase;
+import com.aliletter.carouselbannar.CarouselBanner;
+import com.aliletter.carouselbannar.interfaces.CarouselImageFactory;
+import com.aliletter.carouselbannar.interfaces.OnCarouselBannarListener;
+import com.aliletter.onhttp.OnHttp;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main2Activity extends AppCompatActivity {
-    NormalRecyclerViewBanner banner, banner2;
+    CarouselBanner banner, banner2;
 
 
     @Override
@@ -25,13 +28,23 @@ public class Main2Activity extends AppCompatActivity {
         list.add("http://oo6pz0u05.bkt.clouddn.com/17-12-13/23738150.jpg");
         list.add("http://oo6pz0u05.bkt.clouddn.com/17-12-13/30127126.jpg");
         list.add("http://oo6pz0u05.bkt.clouddn.com/17-12-13/36125492.jpg");
-        banner.initBannerImageView(list, new CarouselBannerBase.OnBannerItemClickListener() {
+        banner.initBanner(list, new CarouselImageFactory() {
             @Override
-            public void onItemClick(int position) {
+            public void onLoadFactory(String url, ImageView view) {
+                OnHttp.imageLoader().url(url).view(view).build();
+            }
+        }, new OnCarouselBannarListener() {
+            @Override
+            public void onItemClick(int position, String url) {
                 Toast.makeText(Main2Activity.this, "clicked:" + position, Toast.LENGTH_SHORT).show();
             }
         });
-        banner2.initBannerImageView(list);
+        banner2.initBanner(list, new CarouselImageFactory() {
+            @Override
+            public void onLoadFactory(String url, ImageView view) {
+                OnHttp.imageLoader().url(url).view(view).build();
+            }
+        });
     }
 
 }

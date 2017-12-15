@@ -9,7 +9,11 @@ import android.view.ViewGroup;
 
 import static android.support.v7.widget.RecyclerView.NO_POSITION;
 
-
+/**
+ * Author：alilettter
+ * Github: http://github.com/aliletter
+ * Email: 4884280@qq.com
+ */
 public class BannerLayoutManager extends RecyclerView.LayoutManager implements RecyclerView.SmoothScroller.ScrollVectorProvider {
 
     private static final float SCALE_RATE = 1.2f;

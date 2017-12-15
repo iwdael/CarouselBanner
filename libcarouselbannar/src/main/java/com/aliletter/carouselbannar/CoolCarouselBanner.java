@@ -3,25 +3,30 @@ package com.aliletter.carouselbannar;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
-
-import com.aliletter.carouselbannar.adapter.MzBannerAdapter;
+import com.aliletter.carouselbannar.adapter.CoolCarouselAdapter;
 import com.aliletter.carouselbannar.base.CarouselBannerBase;
+import com.aliletter.carouselbannar.interfaces.CarouselImageFactory;
+import com.aliletter.carouselbannar.interfaces.OnCarouselBannarListener;
 import com.aliletter.carouselbannar.layoutmanager.BannerLayoutManager;
-
 import java.util.List;
 
-public class RecyclerViewBannerNew extends CarouselBannerBase<BannerLayoutManager, MzBannerAdapter> {
+/**
+ * Author：alilettter
+ * Github: http://github.com/aliletter
+ * Email: 4884280@qq.com
+ */
+public class CoolCarouselBanner extends CarouselBannerBase<BannerLayoutManager, CoolCarouselAdapter> {
 
 
-    public RecyclerViewBannerNew(Context context) {
+    public CoolCarouselBanner(Context context) {
         this(context, null);
     }
 
-    public RecyclerViewBannerNew(Context context, AttributeSet attrs) {
+    public CoolCarouselBanner(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public RecyclerViewBannerNew(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CoolCarouselBanner(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
@@ -45,8 +50,8 @@ public class RecyclerViewBannerNew extends CarouselBannerBase<BannerLayoutManage
     }
 
     @Override
-    protected MzBannerAdapter getAdapter(Context context, List<String> list,OnBannerItemClickListener onBannerItemClickListener) {
-        return new MzBannerAdapter(context, list,onBannerItemClickListener);
+    protected CoolCarouselAdapter getAdapter(List<String> list, CarouselImageFactory factory, OnCarouselBannarListener onBannerItemClickListener) {
+        return new CoolCarouselAdapter(list, factory, onBannerItemClickListener);
     }
 
 
