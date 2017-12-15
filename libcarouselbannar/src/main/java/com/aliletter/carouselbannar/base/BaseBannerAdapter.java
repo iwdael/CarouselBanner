@@ -24,7 +24,7 @@ public abstract class BaseBannerAdapter<VH extends BaseViewHolder> extends Recyc
 
     @Override
     public void onBindViewHolder(VH holder, int position) {
-        holder.bindData(urlList.get(position % urlList.size()), position, factory, onClickListener);
+        holder.bindData(urlList.get(position % urlList.size()),  position % urlList.size(), factory, onClickListener);
     }
 
     @Override

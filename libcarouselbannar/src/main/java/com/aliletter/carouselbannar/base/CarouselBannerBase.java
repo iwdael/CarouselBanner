@@ -368,7 +368,7 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     /**
      * 改变导航的指示点
      */
-    protected synchronized void refreshIndicator() {
+    protected  void refreshIndicator() {
         if (showIndicator && bannerSize > 1) {
             indicatorAdapter.setPosition(currentIndex % bannerSize);
             indicatorAdapter.notifyDataSetChanged();
