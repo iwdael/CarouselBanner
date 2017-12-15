@@ -68,7 +68,7 @@ public class CarouselBanner extends CarouselBannerBase<BannarLayoutManager, Caro
 
     @Override
     protected BannarLayoutManager getLayoutManager(Context context, int orientation) {
-        return new BannarLayoutManager(context, orientation, false);
+        return new BannarLayoutManager(context, orientation, false,speedPerPixelMillisecond);
     }
 
     @Override
