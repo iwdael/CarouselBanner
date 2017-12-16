@@ -65,6 +65,9 @@ Add it in your application module build.gradle at the end of dependencies where 
 	}
 ```
 CarouselBanner
+<br>
 ![Image Text](https://github.com/aliletter/CarouselBanner/blob/master/CarouselBanner.gif)
+<br><br>
 CoolCarouselBanner
+<br>
 ![Image Text](https://github.com/aliletter/CarouselBanner/blob/master/CoolCarouselBanner.gif)
