@@ -44,11 +44,32 @@ The user needs to implement the process of loading the picture.
         app:orientation="horizontal"
         app:speedPerPixelMillisecond="0.8" />
 ```
+## How to
+To get a Git project into your build:
+### Step 1. Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:
+```Java
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+### Step 2. Add the dependency
+Add it in your application module build.gradle at the end of dependencies where you want to use:
+```Java
+	dependencies {
+                ...
+	        compile 'com.github.aliletter:carouselbanner:v1.0.0'
+	}
+```
 CarouselBanner
 
 ![Image Text](https://github.com/aliletter/CarouselBanner/blob/master/CarouselBanner.gif)
-
-
+  
+   
+      
 CoolCarouselBanner
 
 ![Image Text](https://github.com/aliletter/CarouselBanner/blob/master/CoolCarouselBanner.gif)
