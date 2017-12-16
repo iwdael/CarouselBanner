@@ -44,3 +44,11 @@ The user needs to implement the process of loading the picture.
         app:orientation="horizontal"
         app:speedPerPixelMillisecond="0.8" />
 ```
+CarouselBanner
+
+![Image Text](https://github.com/aliletter/CarouselBanner/blob/master/CarouselBanner.gif)
+
+
+CoolCarouselBanner
+
+![Image Text](https://github.com/aliletter/CarouselBanner/blob/master/CoolCarouselBanner.gif)
