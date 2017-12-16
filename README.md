@@ -1,5 +1,5 @@
-# CarouselBannar [![](https://jitpack.io/v/aliletter/carouselbannar.svg)](https://jitpack.io/#aliletter/carouselbannar)
-CarouselBannar is a control that displays pictures or ads. It is simple to use and does not rely on other third party frameworks, and allows user to implement the process of loading the picture is implemented  by the interface.(CarouselBannar 是一款展示图片或者广告的控件。它使用简单，不依赖其他第三方框架，而且把图片加载的过程通过接口的方式让使用者自行实现。)
+# CarouselBanner [![](https://jitpack.io/v/aliletter/carouselbanner.svg)](https://jitpack.io/#aliletter/carouselbanner)
+CarouselBanner is a control that displays pictures or ads. It is simple to use and does not rely on other third party frameworks, and allows user to implement the process of loading the picture is implemented  by the interface.(CarouselBannar 是一款展示图片或者广告的控件。它使用简单，不依赖其他第三方框架，而且把图片加载的过程通过接口的方式让使用者自行实现。)
 ## Instruction
 CarouselBanner can set the direction of image scroll, such as horizontal and vertical, and also can set the speed of rolling, the time of rolling, and the location of indicator. CarouselBanner is a common carousel controls, if you need to use a zoom effect control, please use the CoolCarouselBanner.
 ### Code Sample
@@ -23,7 +23,7 @@ The user needs to implement the process of loading the picture.
             public void onLoadFactory(String url, ImageView view) {
                 OnHttp.imageLoader().url(url).view(view).defaultId(R.mipmap.ic_launcher).build();
             }
-        }, new OnCarouselBannarListener() {
+        }, new OnCarouselBannerListener() {
             @Override
             public void onItemClick(int position, String url) {
                 Toast.makeText(MainActivity.this, "clicked:" + position, Toast.LENGTH_SHORT).show();
