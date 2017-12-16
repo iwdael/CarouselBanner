@@ -5,7 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/CarouselBannar.iml" filepath="$PROJECT_DIR$/CarouselBannar.iml" />
       <module fileurl="file://C:\Users\alile\Desktop\CarouselBannar\example\app.iml" filepath="C:\Users\alile\Desktop\CarouselBannar\example\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libcarouselbanner/libcarouselbannar.iml" filepath="$PROJECT_DIR$/libcarouselbanner/libcarouselbannar.iml" />
+      <module fileurl="file://C:\Users\absurd\Desktop\CarouselBannar\libcarouselbanner\libcarouselbannar.iml" filepath="C:\Users\absurd\Desktop\CarouselBannar\libcarouselbanner\libcarouselbannar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libcarouselbanner/libcarouselbanner.iml" filepath="$PROJECT_DIR$/libcarouselbanner/libcarouselbanner.iml" />
     </modules>
   </component>
 </project>
