@@ -5,13 +5,23 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.aliletter.carouselbannar.CoolCarouselBanner
+    <!--<com.aliletter.carouselbannar.CarouselBanner-->
+
+    <com.aliletter.carouselbanner.CoolCarouselBanner
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        app:orientation="horizontal" />
+        app:autoPlaying="true"
+        app:indicatorGravity="left"
+        app:indicatorSelectedSrc="#d6c2c2"
+        app:indicatorUnselectedSrc="#df0000"
+        app:orientation="horizontal"
+        app:speedPerPixelMillisecond="0.8" />
 
-    <com.aliletter.carouselbannar.CoolCarouselBanner
+    <!--app:orientation="horizontal" />-->
+
+
+    <com.aliletter.carouselbanner.CoolCarouselBanner
         android:id="@+id/banner2"
         android:layout_width="match_parent"
         android:layout_height="200dp"

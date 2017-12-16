@@ -1,1 +1,1 @@
-include ':example', ':libcarouselbannar'
+include ':example', ':libcarouselbanner'
