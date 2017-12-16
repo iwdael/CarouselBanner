@@ -71,3 +71,7 @@ CarouselBanner
 CoolCarouselBanner
 <br>
 ![Image Text](https://github.com/aliletter/CarouselBanner/blob/master/CoolCarouselBanner.gif)
+<br>
+## Thank you for your browsing
+If you have any questions, please join the QQ group. I will do my best to answer it for you. Welcome to star and fork this repository, alse follow me.
+
