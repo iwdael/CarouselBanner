@@ -73,7 +73,6 @@ CoolCarouselBanner
 ![Image Text](https://github.com/aliletter/CarouselBanner/blob/master/CoolCarouselBanner.gif)
 <br>
 ## 感谢浏览
-If you have any questions, please join the QQ group. I will do my best to answer it for you. Welcome to star and fork this repository, alse follow me.
 如果你有任何疑问，请加入QQ群，我将竭诚为你解答。欢迎Star和Fork本仓库，当然也欢迎你关注我。
 <br>
 ![Image Text](https://github.com/aliletter/CarouselBanner/blob/master/qq_group.png)
