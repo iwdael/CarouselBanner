@@ -1,15 +1,16 @@
-package com.aliletter.carouselbanner.base;
+package com.blackchopper.carouselbanner.base;
 
 import android.support.v7.widget.RecyclerView;
 
-import com.aliletter.carouselbanner.interfaces.CarouselImageFactory;
-import com.aliletter.carouselbanner.interfaces.OnCarouselBannerListener;
+import com.blackchopper.carouselbanner.interfaces.CarouselImageFactory;
+import com.blackchopper.carouselbanner.interfaces.OnCarouselBannerListener;
 
 import java.util.List;
 /**
- * Author：alilettter
- * Github: http://github.com/aliletter
- * Email: 4884280@qq.com
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
  */
 public abstract class BaseBannerAdapter<VH extends BaseViewHolder> extends RecyclerView.Adapter<VH> {
     protected List<String> urlList;

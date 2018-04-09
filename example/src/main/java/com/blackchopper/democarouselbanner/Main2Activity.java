@@ -1,13 +1,14 @@
-package com.aliletter.democarouselbanner;
+package com.blackchopper.democarouselbanner;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.aliletter.carouselbanner.CarouselBanner;
-import com.aliletter.carouselbanner.interfaces.CarouselImageFactory;
-import com.aliletter.carouselbanner.interfaces.OnCarouselBannerListener;
+import com.blackchopper.democarouselbanner.R;
+import com.blackchopper.carouselbanner.CarouselBanner;
+import com.blackchopper.carouselbanner.interfaces.CarouselImageFactory;
+import com.blackchopper.carouselbanner.interfaces.OnCarouselBannerListener;
 import com.aliletter.onhttp.OnHttp;
 
 import java.util.ArrayList;

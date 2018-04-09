@@ -1,17 +1,17 @@
-package com.aliletter.carouselbanner.viewholder;
+package com.blackchopper.carouselbanner.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.aliletter.carouselbanner.base.BaseViewHolder;
+import com.blackchopper.carouselbanner.base.BaseViewHolder;
 
 /**
- * Author：alilettter
- * Github: http://github.com/aliletter
- * Email: 4884280@qq.com
- * data: 2017/12/15
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
  */
 
 public class CarouselViewHolder extends BaseViewHolder {

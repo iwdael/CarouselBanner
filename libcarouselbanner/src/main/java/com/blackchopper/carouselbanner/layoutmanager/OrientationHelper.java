@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.aliletter.carouselbanner.layoutmanager;
+package com.blackchopper.carouselbanner.layoutmanager;
 
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
@@ -22,14 +22,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 /**
- * Helper class for LayoutManagers to abstract measurements depending on the View's orientation.
- * <p>
- * It is developed to easily support vertical and horizontal orientations in a LayoutManager but
- * can also be used to abstract calls around view bounds and child measurements with margins and
- * decorations.
- *
- * @see #createHorizontalHelper(RecyclerView.LayoutManager)
- * @see #createVerticalHelper(RecyclerView.LayoutManager)
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
  */
 @SuppressWarnings({"WeakerAccess","unused"})
 public abstract class OrientationHelper {
@@ -51,175 +47,143 @@ public abstract class OrientationHelper {
     }
 
     /**
-     * Call this method after onLayout method is complete if state is NOT pre-layout.
-     * This method records information like layout bounds that might be useful in the next layout
-     * calculations.
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public void onLayoutComplete() {
         mLastTotalSpace = getTotalSpace();
     }
 
     /**
-     * Returns the layout space change between the previous layout pass and current layout pass.
-     * <p>
-     * Make sure you call {@link #onLayoutComplete()} at the end of your LayoutManager's
-     * {@link RecyclerView.LayoutManager#onLayoutChildren(RecyclerView.Recycler,
-     * RecyclerView.State)} method.
-     *
-     * @return The difference between the current total space and previous layout's total space.
-     * @see #onLayoutComplete()
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public int getTotalSpaceChange() {
         return INVALID_SIZE == mLastTotalSpace ? 0 : getTotalSpace() - mLastTotalSpace;
     }
 
     /**
-     * Returns the start of the view including its decoration and margin.
-     * <p>
-     * For example, for the horizontal helper, if a View's left is at pixel 20, has 2px left
-     * decoration and 3px left margin, returned value will be 15px.
-     *
-     * @param view The view element to check
-     * @return The first pixel of the element
-     * @see #getDecoratedEnd(View)
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public abstract int getDecoratedStart(View view);
 
     /**
-     * Returns the end of the view including its decoration and margin.
-     * <p>
-     * For example, for the horizontal helper, if a View's right is at pixel 200, has 2px right
-     * decoration and 3px right margin, returned value will be 205.
-     *
-     * @param view The view element to check
-     * @return The last pixel of the element
-     * @see #getDecoratedStart(View)
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public abstract int getDecoratedEnd(View view);
 
     /**
-     * Returns the end of the View after its matrix transformations are applied to its layout
-     * position.
-     * <p>
-     * This method is useful when trying to detect the visible edge of a View.
-     * <p>
-     * It includes the decorations but does not include the margins.
-     *
-     * @param view The view whose transformed end will be returned
-     * @return The end of the View after its decor insets and transformation matrix is applied to
-     * its position
-     * @see RecyclerView.LayoutManager#getTransformedBoundingBox(View, boolean, Rect)
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public abstract int getTransformedEndWithDecoration(View view);
 
     /**
-     * Returns the start of the View after its matrix transformations are applied to its layout
-     * position.
-     * <p>
-     * This method is useful when trying to detect the visible edge of a View.
-     * <p>
-     * It includes the decorations but does not include the margins.
-     *
-     * @param view The view whose transformed start will be returned
-     * @return The start of the View after its decor insets and transformation matrix is applied to
-     * its position
-     * @see RecyclerView.LayoutManager#getTransformedBoundingBox(View, boolean, Rect)
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public abstract int getTransformedStartWithDecoration(View view);
 
     /**
-     * Returns the space occupied by this View in the current orientation including decorations and
-     * margins.
-     *
-     * @param view The view element to check
-     * @return Total space occupied by this view
-     * @see #getDecoratedMeasurementInOther(View)
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public abstract int getDecoratedMeasurement(View view);
 
     /**
-     * Returns the space occupied by this View in the perpendicular orientation including
-     * decorations and margins.
-     *
-     * @param view The view element to check
-     * @return Total space occupied by this view in the perpendicular orientation to current one
-     * @see #getDecoratedMeasurement(View)
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public abstract int getDecoratedMeasurementInOther(View view);
 
     /**
-     * Returns the start position of the layout after the start padding is added.
-     *
-     * @return The very first pixel we can draw.
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public abstract int getStartAfterPadding();
 
     /**
-     * Returns the end position of the layout after the end padding is removed.
-     *
-     * @return The end boundary for this layout.
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public abstract int getEndAfterPadding();
 
     /**
-     * Returns the end position of the layout without taking padding into account.
-     *
-     * @return The end boundary for this layout without considering padding.
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public abstract int getEnd();
 
     /**
-     * Returns the total space to layout. This number is the difference between
-     * {@link #getEndAfterPadding()} and {@link #getStartAfterPadding()}.
-     *
-     * @return Total space to layout children
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public abstract int getTotalSpace();
 
     /**
-     * Returns the total space in other direction to layout. This number is the difference between
-     * {@link #getEndAfterPadding()} and {@link #getStartAfterPadding()}.
-     *
-     * @return Total space to layout children
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public abstract int getTotalSpaceInOther();
 
     /**
-     * Returns the padding at the end of the layout. For horizontal helper, this is the right
-     * padding and for vertical helper, this is the bottom padding. This method does not check
-     * whether the layout is RTL or not.
-     *
-     * @return The padding at the end of the layout.
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public abstract int getEndPadding();
 
     /**
-     * Returns the MeasureSpec mode for the current orientation from the LayoutManager.
-     *
-     * @return The current measure spec mode.
-     * @see View.MeasureSpec
-     * @see RecyclerView.LayoutManager#getWidthMode()
-     * @see RecyclerView.LayoutManager#getHeightMode()
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public abstract int getMode();
 
     /**
-     * Returns the MeasureSpec mode for the perpendicular orientation from the LayoutManager.
-     *
-     * @return The current measure spec mode.
-     * @see View.MeasureSpec
-     * @see RecyclerView.LayoutManager#getWidthMode()
-     * @see RecyclerView.LayoutManager#getHeightMode()
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public abstract int getModeInOther();
 
     /**
-     * Creates an OrientationHelper for the given LayoutManager and orientation.
-     *
-     * @param layoutManager LayoutManager to attach to
-     * @param orientation   Desired orientation. Should be {@link #HORIZONTAL} or {@link #VERTICAL}
-     * @return A new OrientationHelper
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public static OrientationHelper createOrientationHelper(
             RecyclerView.LayoutManager layoutManager, int orientation) {
         switch (orientation) {
@@ -232,11 +196,11 @@ public abstract class OrientationHelper {
     }
 
     /**
-     * Creates a horizontal OrientationHelper for the given LayoutManager.
-     *
-     * @param layoutManager The LayoutManager to attach to.
-     * @return A new OrientationHelper
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public static OrientationHelper createHorizontalHelper(
             RecyclerView.LayoutManager layoutManager) {
         return new OrientationHelper(layoutManager) {
@@ -326,11 +290,11 @@ public abstract class OrientationHelper {
     }
 
     /**
-     * Creates a vertical OrientationHelper for the given LayoutManager.
-     *
-     * @param layoutManager The LayoutManager to attach to.
-     * @return A new OrientationHelper
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public static OrientationHelper createVerticalHelper(RecyclerView.LayoutManager layoutManager) {
         return new OrientationHelper(layoutManager) {
             @Override

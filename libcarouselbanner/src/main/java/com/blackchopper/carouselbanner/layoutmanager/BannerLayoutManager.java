@@ -1,4 +1,4 @@
-package com.aliletter.carouselbanner.layoutmanager;
+package com.blackchopper.carouselbanner.layoutmanager;
 
 import android.content.Context;
 import android.graphics.PointF;
@@ -10,10 +10,10 @@ import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 
 /**
- * Author：alilettter
- * Github: http://github.com/aliletter
- * Email: 4884280@qq.com
- * data: 2017/12/15
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
  */
 
 public class BannerLayoutManager extends LinearLayoutManager {

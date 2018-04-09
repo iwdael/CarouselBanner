@@ -1,9 +1,8 @@
-package com.aliletter.carouselbanner.layoutmanager;
+package com.blackchopper.carouselbanner.layoutmanager;
 
 import android.content.Context;
 import android.graphics.PointF;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSmoothScroller;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
@@ -13,9 +12,10 @@ import android.view.ViewGroup;
 import static android.support.v7.widget.RecyclerView.NO_POSITION;
 
 /**
- * Author：alilettter
- * Github: http://github.com/aliletter
- * Email: 4884280@qq.com
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
  */
 public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implements RecyclerView.SmoothScroller.ScrollVectorProvider {
 
@@ -37,27 +37,35 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     private int mSpaceInOther;
 
     /**
-     * The offset of property which will change while scrolling
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     private float mOffset;
 
     /**
-     * Many calculations are made depending on orientation. To keep it clean, this interface
-     * helps {@link LinearLayoutManager} make those decisions.
-     * Based on {@link #mOrientation}, an implementation is lazily created in
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     private OrientationHelper mOrientationHelper;
 
     /**
-     * Works the same way as {@link android.widget.AbsListView#setSmoothScrollbarEnabled(boolean)}.
-     * see {@link android.widget.AbsListView#setSmoothScrollbarEnabled(boolean)}
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     private boolean mSmoothScrollbarEnabled = true;
 
     /**
-     * When LayoutManager needs to scroll to a position, it sets this variable and requests a
-     * layout which will check this variable and re-layout accordingly.
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     private int mPendingScrollPosition = NO_POSITION;
 
 
@@ -86,17 +94,22 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
 
 
     /**
-     * @return the mInterval of each item's mOffset
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     private float setInterval() {
         return mDecoratedMeasurement * ((1.2f - 1) / 2 + 1) + itemSpace;
     }
 
 
     /**
-     * @param x start positon of the view you want scale
-     * @return the scale rate of current scroll mOffset
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     private float calculateScale(float x) {
         float deltaX = Math.abs(x - (mOrientationHelper.getTotalSpace() - mDecoratedMeasurement) / 2f);
         float diff = 0f;
@@ -105,10 +118,11 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     }
 
     /**
-     * cause elevation is not support below api 21,
-     * so you can set your elevation here for supporting it below api 21
-     * or you can just setElevation in {@link #setItemViewProperty(View, float)}
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     private float setViewElevation(View itemView, float targetOffset) {
         return 0;
     }
@@ -121,37 +135,43 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
 
 
     /**
-     * @return true if {@link #getOrientation()} is {@link #HORIZONTAL}
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     @Override
     public boolean canScrollHorizontally() {
         return mOrientation == HORIZONTAL;
     }
 
     /**
-     * @return true if {@link #getOrientation()} is {@link #VERTICAL}
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     @Override
     public boolean canScrollVertically() {
         return mOrientation == VERTICAL;
     }
 
     /**
-     * Returns the current orientation of the layout.
-     *
-     * @return Current orientation,  either {@link #HORIZONTAL} or {@link #VERTICAL}
-     * @see #setOrientation(int)
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     int getOrientation() {
         return mOrientation;
     }
 
     /**
-     * Sets the orientation of the layout. {@link CoolBannerLayoutManager}
-     * will do its best to keep scroll position.
-     *
-     * @param orientation {@link #HORIZONTAL} or {@link #VERTICAL}
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     void setOrientation(int orientation) {
         if (orientation != HORIZONTAL && orientation != VERTICAL) {
             throw new IllegalArgumentException("invalid orientation:" + orientation);
@@ -508,17 +528,21 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     }
 
     /**
-     * when the target offset reach this,
-     * the view will be removed and recycled in {@link #layoutItems(RecyclerView.Recycler)}
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     private float maxRemoveOffset() {
         return mOrientationHelper.getTotalSpace() - mSpaceMain;
     }
 
     /**
-     * when the target offset reach this,
-     * the view will be removed and recycled in {@link #layoutItems(RecyclerView.Recycler)}
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     private float minRemoveOffset() {
         return -mDecoratedMeasurement - mOrientationHelper.getStartAfterPadding() - mSpaceMain;
     }
@@ -545,9 +569,11 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     }
 
     /**
-     * Sometimes we need to get the right offset of matching adapter position
-     * cause when {@link #mInfinite} is set true, there will be no limitation of {@link #mOffset}
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     private float getOffsetOfRightAdapterPosition() {
         return mInfinite ?
                 (mOffset >= 0 ?
@@ -557,10 +583,11 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     }
 
     /**
-     * used by {@link CenterScrollListener} to center the current view
-     *
-     * @return the dy between center and current position
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public int getOffsetToCenter() {
         if (mInfinite)
             return (int) ((getCurrentPositionOffset() * mInterval - mOffset) * getDistanceRatio());

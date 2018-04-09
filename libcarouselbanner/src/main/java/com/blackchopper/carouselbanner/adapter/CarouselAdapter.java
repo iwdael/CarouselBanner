@@ -1,19 +1,20 @@
-package com.aliletter.carouselbanner.adapter;
+package com.blackchopper.carouselbanner.adapter;
 
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.aliletter.carouselbanner.base.BaseBannerAdapter;
-import com.aliletter.carouselbanner.interfaces.CarouselImageFactory;
-import com.aliletter.carouselbanner.interfaces.OnCarouselBannerListener;
-import com.aliletter.carouselbanner.viewholder.CarouselViewHolder;
+import com.blackchopper.carouselbanner.base.BaseBannerAdapter;
+import com.blackchopper.carouselbanner.interfaces.CarouselImageFactory;
+import com.blackchopper.carouselbanner.interfaces.OnCarouselBannerListener;
+import com.blackchopper.carouselbanner.viewholder.CarouselViewHolder;
 
 import java.util.List;
 
 /**
- * Author：alilettter
- * Github: http://github.com/aliletter
- * Email: 4884280@qq.com
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
  */
 public class CarouselAdapter extends BaseBannerAdapter<CarouselViewHolder> {
 

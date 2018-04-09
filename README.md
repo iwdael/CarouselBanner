@@ -1,5 +1,5 @@
-# CarouselBanner [![](https://jitpack.io/v/aliletter/carouselbanner.svg)](https://jitpack.io/#aliletter/carouselbanner)
-CarouselBanner is a control that displays pictures or ads. It is simple to use and does not rely on other third party frameworks, and allows user to implement the process of loading the picture is implemented  by the interface.[中文文档](https://github.com/aliletter/CarouselBanner/blob/master/README_CHINESE.md)
+# CarouselBanner [![](https://jitpack.io/v/blackchopper/carouselbanner.svg)](https://jitpack.io/#blackchopper/carouselbanner)
+CarouselBanner is a control that displays pictures or ads. It is simple to use and does not rely on other third party frameworks, and allows user to implement the process of loading the picture is implemented  by the interface.[中文文档](https://github.com/blackchopper/CarouselBanner/blob/master/README_CHINESE.md)
 ## Instruction
 CarouselBanner can set the direction of image scroll, such as horizontal and vertical, and also can set the speed of rolling, the time of rolling, and the location of indicator. CarouselBanner is a common carousel controls, if you need to use a zoom effect control, please use the CoolCarouselBanner.
 ### Code Sample
@@ -32,8 +32,8 @@ The user needs to implement the process of loading the picture.
 
 ```
 ```Java
-    <!--<com.aliletter.carouselbanner.CarouselBanner-->
-    <com.aliletter.carouselbanner.CoolCarouselBanner
+    <!--<com.blackchopper.carouselbanner.CarouselBanner-->
+    <com.blackchopper.carouselbanner.CoolCarouselBanner
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -47,7 +47,7 @@ The user needs to implement the process of loading the picture.
 ## How to
 To get a Git project into your build:
 ### Step 1. Add the JitPack repository to your build file
-Add it in your root build.gradle at the end of repositories.   [click here for details](https://github.com/aliletter/CarouselBanner/blob/master/root_build.gradle.png)
+Add it in your root build.gradle at the end of repositories.   [click here for details](https://github.com/blackchopper/CarouselBanner/blob/master/root_build.gradle.png)
 ```Java
 	allprojects {
 		repositories {
@@ -57,22 +57,22 @@ Add it in your root build.gradle at the end of repositories.   [click here for d
 	}
 ```
 ### Step 2. Add the dependency
-Add it in your application module build.gradle at the end of dependencies where you want to use.   [click here for details](https://github.com/aliletter/CarouselBanner/blob/master/application_build.gradle.png)
+Add it in your application module build.gradle at the end of dependencies where you want to use.   [click here for details](https://github.com/blackchopper/CarouselBanner/blob/master/application_build.gradle.png)
 ```Java
 	dependencies {
                 ...
-	        compile 'com.github.aliletter:carouselbanner:v1.0.0'
+	        compile 'com.github.blackchopper:carouselbanner:v1.0.1'
 	}
 ```
 CarouselBanner
 <br>
-![Image Text](https://github.com/aliletter/CarouselBanner/blob/master/CarouselBanner.gif)
+![Image Text](https://github.com/blackchopper/CarouselBanner/blob/master/CarouselBanner.gif)
 <br><br>
 CoolCarouselBanner
 <br>
-![Image Text](https://github.com/aliletter/CarouselBanner/blob/master/CoolCarouselBanner.gif)
+![Image Text](https://github.com/blackchopper/CarouselBanner/blob/master/CoolCarouselBanner.gif)
 <br>
 ## Thank you for your browsing
 If you have any questions, please join the QQ group. I will do my best to answer it for you. Welcome to star and fork this repository, alse follow me.
 <br>
-![Image Text](https://github.com/aliletter/CarouselBanner/blob/master/qq_group.png)
+![Image Text](https://github.com/blackchopper/CarouselBanner/blob/master/qq_group.png)

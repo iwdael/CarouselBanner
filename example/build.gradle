@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.aliletter.democarouselbannar"
+        applicationId "com.blackchopper.democarouselbannar"
         minSdkVersion 14
         targetSdkVersion 26
         versionCode 1

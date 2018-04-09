@@ -1,4 +1,4 @@
-package com.aliletter.carouselbanner.base;
+package com.blackchopper.carouselbanner.base;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -24,17 +24,18 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import com.aliletter.carouselbanner.R;
-import com.aliletter.carouselbanner.interfaces.CarouselImageFactory;
-import com.aliletter.carouselbanner.interfaces.OnCarouselBannerListener;
+import com.blackchopper.carouselbanner.R;
+import com.blackchopper.carouselbanner.interfaces.CarouselImageFactory;
+import com.blackchopper.carouselbanner.interfaces.OnCarouselBannerListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Author：alilettter
- * Github: http://github.com/aliletter
- * Email: 4884280@qq.com
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
  */
 public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A extends BaseBannerAdapter> extends FrameLayout {
 
@@ -183,19 +184,21 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     protected abstract A getAdapter(List<String> list, CarouselImageFactory factory, OnCarouselBannerListener onBannerItemClickListener);
 
     /**
-     * 设置轮播间隔时间
-     *
-     * @param millisecond 时间毫秒
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public void setIndicatorInterval(int millisecond) {
         this.autoPlayDuration = millisecond;
     }
 
     /**
-     * 设置是否自动播放（上锁）
-     *
-     * @param playing 开始播放
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     protected void setPlaying(boolean playing) {
         if (isAutoPlaying && hasInit) {
             if (!isPlaying && playing && adapter != null && adapter.getItemCount() > 2) {
@@ -209,8 +212,11 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     }
 
     /**
-     * 设置是否禁止滚动播放
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public void setAutoPlaying(boolean isAutoPlaying) {
         this.isAutoPlaying = isAutoPlaying;
         setPlaying(this.isAutoPlaying);
@@ -230,8 +236,11 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     }
 
     /**
-     * 设置轮播数据集
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public void initBanner(@NonNull List<String> newList, CarouselImageFactory factory, OnCarouselBannerListener onBannerItemClickListener) {
         //解决recyclerView嵌套问题
         if (compareListDifferent(newList, tempUrlList)) {
@@ -260,8 +269,11 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     }
 
     /**
-     * 设置轮播数据集
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     public void initBanner(@NonNull List<String> newList, CarouselImageFactory factory) {
         initBanner(newList, factory, null);
     }
@@ -331,8 +343,11 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     }
 
     /**
-     * 标示点适配器
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     protected class IndicatorAdapter extends RecyclerView.Adapter {
 
         int currentPosition = 0;
@@ -368,8 +383,11 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
 
 
     /**
-     * 改变导航的指示点
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     protected void refreshIndicator() {
         if (showIndicator && bannerSize > 1) {
             indicatorAdapter.setPosition(currentIndex % bannerSize);
@@ -383,8 +401,11 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     }
 
     /**
-     * 获取颜色
-     */
+ * author  : Black Chopper
+ * e-mail  : 4884280@qq.com
+ * github  : http://github.com/BlackChopper
+ * project : CarouselBanner
+ */
     protected int getColor(@ColorRes int color) {
         return ContextCompat.getColor(getContext(), color);
     }

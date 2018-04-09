@@ -7,7 +7,7 @@
 
     <!--<com.aliletter.carouselbannar.CarouselBanner-->
 
-    <com.aliletter.carouselbanner.CoolCarouselBanner
+    <com.blackchopper.carouselbanner.CoolCarouselBanner
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -21,7 +21,7 @@
     <!--app:orientation="horizontal" />-->
 
 
-    <com.aliletter.carouselbanner.CoolCarouselBanner
+    <com.blackchopper.carouselbanner.CoolCarouselBanner
         android:id="@+id/banner2"
         android:layout_width="match_parent"
         android:layout_height="200dp"
