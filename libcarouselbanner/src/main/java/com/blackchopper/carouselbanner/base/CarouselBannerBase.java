@@ -244,7 +244,7 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     public void initBanner(@NonNull List<String> newList, CarouselImageFactory factory, OnCarouselBannerListener onBannerItemClickListener) {
         //解决recyclerView嵌套问题
         if (compareListDifferent(newList, tempUrlList)) {
-            this.onBannerItemClickListener = onBannerItemClickListener;
+            this.onBannerItemClickListener = (onBannerItemClickListener==null? this.onBannerItemClickListener:onBannerItemClickListener);
             hasInit = false;
             setVisibility(VISIBLE);
             setPlaying(false);
