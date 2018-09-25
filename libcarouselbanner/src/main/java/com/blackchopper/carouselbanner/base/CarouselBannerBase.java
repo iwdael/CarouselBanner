@@ -394,6 +394,8 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
             indicatorAdapter.setPosition(currentIndex % bannerSize);
             indicatorAdapter.notifyDataSetChanged();
         }
+        if (onBannerItemClickListener!=null)
+            onBannerItemClickListener.onItemChange(currentIndex % bannerSize);
     }
 
 
