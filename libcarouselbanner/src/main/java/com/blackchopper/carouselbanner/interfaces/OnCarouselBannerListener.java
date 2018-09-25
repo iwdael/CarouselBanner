@@ -10,5 +10,6 @@ package com.blackchopper.carouselbanner.interfaces;
 public interface OnCarouselBannerListener {
 
     void onItemClick(int position, String url);
+    void onItemChange(int position);
 
 }
