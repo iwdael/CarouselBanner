@@ -1,4 +1,4 @@
-package com.blackchopper.democarouselbanner;
+package com.hacknife.demo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,11 +8,11 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
-import com.blackchopper.democarouselbanner.R;
-import com.blackchopper.carouselbanner.CoolCarouselBanner;
-import com.blackchopper.carouselbanner.interfaces.CarouselImageFactory;
-import com.blackchopper.carouselbanner.interfaces.OnCarouselBannerListener;
 import com.aliletter.onhttp.OnHttp;
+import com.hacknife.carouselbanner.CoolCarouselBanner;
+import com.hacknife.carouselbanner.interfaces.CarouselImageFactory;
+import com.hacknife.carouselbanner.interfaces.OnCarouselBannerListener;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(int position, String url) {
                 Toast.makeText(MainActivity.this, "clicked:" + position, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onItemChange(int position) {
+
             }
         });
 

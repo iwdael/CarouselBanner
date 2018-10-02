@@ -26,6 +26,5 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.android.support:cardview-v7:26.1.0'
     implementation 'com.android.support:recyclerview-v7:26.1.0'
-    compile 'com.github.aliletter:onhttp:v1.2.6'
 
 }

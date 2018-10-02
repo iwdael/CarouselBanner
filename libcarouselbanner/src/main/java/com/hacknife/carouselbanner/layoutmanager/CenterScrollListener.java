@@ -1,4 +1,4 @@
-package com.blackchopper.carouselbanner.layoutmanager;
+package com.hacknife.carouselbanner.layoutmanager;
 
 import android.support.v7.widget.RecyclerView;
 

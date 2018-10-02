@@ -1,9 +1,9 @@
-package com.blackchopper.carouselbanner.viewholder;
+package com.hacknife.carouselbanner.viewholder;
 
 import android.view.View;
 
-import com.blackchopper.carouselbanner.R;
-import com.blackchopper.carouselbanner.base.BaseViewHolder;
+import com.hacknife.carouselbanner.R;
+import com.hacknife.carouselbanner.base.BaseViewHolder;
 
 /**
  * author  : Black Chopper

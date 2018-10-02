@@ -1,13 +1,13 @@
-package com.blackchopper.carouselbanner.adapter;
+package com.hacknife.carouselbanner.adapter;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.blackchopper.carouselbanner.R;
-import com.blackchopper.carouselbanner.base.BaseBannerAdapter;
-import com.blackchopper.carouselbanner.interfaces.CarouselImageFactory;
-import com.blackchopper.carouselbanner.interfaces.OnCarouselBannerListener;
-import com.blackchopper.carouselbanner.viewholder.CoolCarouselViewHolder;
+import com.hacknife.carouselbanner.R;
+import com.hacknife.carouselbanner.base.BaseBannerAdapter;
+import com.hacknife.carouselbanner.interfaces.CarouselImageFactory;
+import com.hacknife.carouselbanner.interfaces.OnCarouselBannerListener;
+import com.hacknife.carouselbanner.viewholder.CoolCarouselViewHolder;
 
 import java.util.List;
 

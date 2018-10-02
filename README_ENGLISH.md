@@ -1,9 +1,9 @@
-# CarouselBanner [![](https://jitpack.io/v/blackchopper/carouselbanner.svg)](https://jitpack.io/#blackchopper/carouselbanner)
-CarouselBanner 是一款展示图片或者广告的控件。它使用简单，不依赖其他第三方框架，而且把图片加载的过程通过接口的方式让使用者自行实现。
-## 使用说明
-CarouselBanner可以设置滚动的方向，例如水平和垂直，也可以设置滚动的速度，滚动间隔时间，以及指示器的位置。CarouselBanner是普通的轮播控件，如果你想使用带有放缩效果的轮播控件，请使用CoolCarouselBanner。
-### 代码示例
-使用者需要实现图片加载的过程。
+# CarouselBanner [![](https://jitpack.io/v/hacknife/carouselbanner.svg)](https://jitpack.io/#hacknife/carouselbanner)
+CarouselBanner is a control that displays pictures or ads. It is simple to use and does not rely on other third party frameworks, and allows user to implement the process of loading the picture is implemented  by the interface.[中文文档](https://github.com/hacknife/CarouselBanner/blob/master/README.md)
+## Instruction
+CarouselBanner can set the direction of image scroll, such as horizontal and vertical, and also can set the speed of rolling, the time of rolling, and the location of indicator. CarouselBanner is a common carousel controls, if you need to use a zoom effect control, please use the CoolCarouselBanner.
+### Code Sample
+The user needs to implement the process of loading the picture.
 ```Java
         CoolCarouselBanner banner;//with zoom effect
         //CarouselBanner
@@ -32,8 +32,8 @@ CarouselBanner可以设置滚动的方向，例如水平和垂直，也可以设
 
 ```
 ```Java
-    <!--<com.blackchopper.carouselbanner.CarouselBanner-->
-    <com.blackchopper.carouselbanner.CoolCarouselBanner
+    <!--<com.hacknife.carouselbanner.CarouselBanner-->
+    <com.hacknife.carouselbanner.CoolCarouselBanner
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -44,10 +44,10 @@ CarouselBanner可以设置滚动的方向，例如水平和垂直，也可以设
         app:orientation="horizontal"
         app:speedPerPixelMillisecond="0.8" />
 ```
-## 如何配置
-将本仓库引入你的项目:
-### Step 1. 添加JitPack仓库到Build文件
-合并以下代码到项目根目录下的build.gradle文件的repositories尾。[点击查看详情](https://github.com/blackchopper/CarouselBanner/blob/master/root_build.gradle.png)
+## How to
+To get a Git project into your build:
+### Step 1. Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories.   [click here for details](https://github.com/hacknife/CarouselBanner/blob/master/root_build.gradle.png)
 ```Java
 	allprojects {
 		repositories {
@@ -56,23 +56,23 @@ CarouselBanner可以设置滚动的方向，例如水平和垂直，也可以设
 		}
 	}
 ```
-### Step 2. 添加依赖   
-合并以下代码到需要使用的application Module的dependencies尾。[点击查看详情](https://github.com/blackchopper/CarouselBanner/blob/master/application_build.gradle.png)
+### Step 2. Add the dependency
+Add it in your application module build.gradle at the end of dependencies where you want to use.   [click here for details](https://github.com/hacknife/CarouselBanner/blob/master/application_build.gradle.png)
 ```Java
 	dependencies {
                 ...
-	        compile 'com.github.blackchopper:carouselbanner:v1.0.1'
+	        compile 'com.github.hacknife:carouselbanner:v1.0.1'
 	}
 ```
 CarouselBanner
 <br>
-![Image Text](https://github.com/blackchopper/CarouselBanner/blob/master/CarouselBanner.gif)
+![Image Text](https://github.com/hacknife/CarouselBanner/blob/master/CarouselBanner.gif)
 <br><br>
 CoolCarouselBanner
 <br>
-![Image Text](https://github.com/blackchopper/CarouselBanner/blob/master/CoolCarouselBanner.gif)
+![Image Text](https://github.com/hacknife/CarouselBanner/blob/master/CoolCarouselBanner.gif)
 <br>
-## 感谢浏览
-如果你有任何疑问，请加入QQ群，我将竭诚为你解答。欢迎Star和Fork本仓库，当然也欢迎你关注我。
+## Thank you for your browsing
+If you have any questions, please join the QQ group. I will do my best to answer it for you. Welcome to star and fork this repository, alse follow me.
 <br>
-![Image Text](https://github.com/blackchopper/CarouselBanner/blob/master/qq_group.png)
+![Image Text](https://github.com/hacknife/CarouselBanner/blob/master/qq_group.png)

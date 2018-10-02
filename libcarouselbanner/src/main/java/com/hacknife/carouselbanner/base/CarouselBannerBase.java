@@ -1,4 +1,4 @@
-package com.blackchopper.carouselbanner.base;
+package com.hacknife.carouselbanner.base;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -24,9 +24,9 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import com.blackchopper.carouselbanner.R;
-import com.blackchopper.carouselbanner.interfaces.CarouselImageFactory;
-import com.blackchopper.carouselbanner.interfaces.OnCarouselBannerListener;
+import com.hacknife.carouselbanner.R;
+import com.hacknife.carouselbanner.interfaces.CarouselImageFactory;
+import com.hacknife.carouselbanner.interfaces.OnCarouselBannerListener;
 
 import java.util.ArrayList;
 import java.util.List;

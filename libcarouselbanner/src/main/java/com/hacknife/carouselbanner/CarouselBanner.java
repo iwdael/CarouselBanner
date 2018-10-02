@@ -1,14 +1,14 @@
-package com.blackchopper.carouselbanner;
+package com.hacknife.carouselbanner;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
-import com.blackchopper.carouselbanner.adapter.CarouselAdapter;
-import com.blackchopper.carouselbanner.base.CarouselBannerBase;
-import com.blackchopper.carouselbanner.interfaces.CarouselImageFactory;
-import com.blackchopper.carouselbanner.interfaces.OnCarouselBannerListener;
-import com.blackchopper.carouselbanner.layoutmanager.BannerLayoutManager;
+import com.hacknife.carouselbanner.adapter.CarouselAdapter;
+import com.hacknife.carouselbanner.base.CarouselBannerBase;
+import com.hacknife.carouselbanner.interfaces.CarouselImageFactory;
+import com.hacknife.carouselbanner.interfaces.OnCarouselBannerListener;
+import com.hacknife.carouselbanner.layoutmanager.BannerLayoutManager;
 
 import java.util.List;
 

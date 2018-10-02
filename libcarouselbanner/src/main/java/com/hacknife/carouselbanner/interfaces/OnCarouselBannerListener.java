@@ -1,4 +1,4 @@
-package com.blackchopper.carouselbanner.interfaces;
+package com.hacknife.carouselbanner.interfaces;
 
 /**
  * author  : Black Chopper

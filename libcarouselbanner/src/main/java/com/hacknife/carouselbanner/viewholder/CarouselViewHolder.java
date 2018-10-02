@@ -1,11 +1,11 @@
-package com.blackchopper.carouselbanner.viewholder;
+package com.hacknife.carouselbanner.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.blackchopper.carouselbanner.base.BaseViewHolder;
+import com.hacknife.carouselbanner.base.BaseViewHolder;
 
 /**
  * author  : Black Chopper

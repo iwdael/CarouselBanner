@@ -1,4 +1,4 @@
-package com.blackchopper.carouselbanner.interfaces;
+package com.hacknife.carouselbanner.interfaces;
 
 import android.widget.ImageView;
 
