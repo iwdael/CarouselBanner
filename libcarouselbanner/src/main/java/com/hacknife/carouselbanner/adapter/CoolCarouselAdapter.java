@@ -12,9 +12,9 @@ import com.hacknife.carouselbanner.viewholder.CoolCarouselViewHolder;
 import java.util.List;
 
 /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
 public class CoolCarouselAdapter extends BaseBannerAdapter<CoolCarouselViewHolder> {

@@ -32,9 +32,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
 public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A extends BaseBannerAdapter> extends FrameLayout {
@@ -184,9 +184,9 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     protected abstract A getAdapter(List<String> list, CarouselImageFactory factory, OnCarouselBannerListener onBannerItemClickListener);
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public void setIndicatorInterval(int millisecond) {
@@ -194,9 +194,9 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     protected void setPlaying(boolean playing) {
@@ -212,9 +212,9 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public void setAutoPlaying(boolean isAutoPlaying) {
@@ -236,9 +236,9 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public void initBanner(@NonNull List<String> newList, CarouselImageFactory factory, OnCarouselBannerListener onBannerItemClickListener) {
@@ -270,9 +270,9 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public void initBanner(@NonNull List<String> newList, CarouselImageFactory factory) {
@@ -344,9 +344,9 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     protected class IndicatorAdapter extends RecyclerView.Adapter {
@@ -384,9 +384,9 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
 
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     protected void refreshIndicator() {
@@ -404,9 +404,9 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     protected int getColor(@ColorRes int color) {

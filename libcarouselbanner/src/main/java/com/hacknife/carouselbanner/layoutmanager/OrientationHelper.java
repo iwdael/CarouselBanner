@@ -22,9 +22,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
 @SuppressWarnings({"WeakerAccess","unused"})
@@ -47,9 +47,9 @@ public abstract class OrientationHelper {
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public void onLayoutComplete() {
@@ -57,9 +57,9 @@ public abstract class OrientationHelper {
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public int getTotalSpaceChange() {
@@ -67,121 +67,121 @@ public abstract class OrientationHelper {
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public abstract int getDecoratedStart(View view);
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public abstract int getDecoratedEnd(View view);
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public abstract int getTransformedEndWithDecoration(View view);
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public abstract int getTransformedStartWithDecoration(View view);
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public abstract int getDecoratedMeasurement(View view);
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public abstract int getDecoratedMeasurementInOther(View view);
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public abstract int getStartAfterPadding();
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public abstract int getEndAfterPadding();
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public abstract int getEnd();
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public abstract int getTotalSpace();
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public abstract int getTotalSpaceInOther();
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public abstract int getEndPadding();
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public abstract int getMode();
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public abstract int getModeInOther();
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public static OrientationHelper createOrientationHelper(
@@ -196,9 +196,9 @@ public abstract class OrientationHelper {
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public static OrientationHelper createHorizontalHelper(
@@ -290,9 +290,9 @@ public abstract class OrientationHelper {
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public static OrientationHelper createVerticalHelper(RecyclerView.LayoutManager layoutManager) {

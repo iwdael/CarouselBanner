@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 import static android.support.v7.widget.RecyclerView.NO_POSITION;
 
 /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
 public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implements RecyclerView.SmoothScroller.ScrollVectorProvider {
@@ -37,33 +37,33 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     private int mSpaceInOther;
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     private float mOffset;
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     private OrientationHelper mOrientationHelper;
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     private boolean mSmoothScrollbarEnabled = true;
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     private int mPendingScrollPosition = NO_POSITION;
@@ -94,9 +94,9 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
 
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     private float setInterval() {
@@ -105,9 +105,9 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
 
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     private float calculateScale(float x) {
@@ -118,9 +118,9 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     private float setViewElevation(View itemView, float targetOffset) {
@@ -135,9 +135,9 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
 
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     @Override
@@ -146,9 +146,9 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     @Override
@@ -157,9 +157,9 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     int getOrientation() {
@@ -167,9 +167,9 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     void setOrientation(int orientation) {
@@ -528,9 +528,9 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     private float maxRemoveOffset() {
@@ -538,9 +538,9 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     private float minRemoveOffset() {
@@ -569,9 +569,9 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     private float getOffsetOfRightAdapterPosition() {
@@ -583,9 +583,9 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     }
 
     /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
     public int getOffsetToCenter() {

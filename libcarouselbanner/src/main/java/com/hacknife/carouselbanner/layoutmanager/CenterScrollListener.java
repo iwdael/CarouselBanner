@@ -3,9 +3,9 @@ package com.hacknife.carouselbanner.layoutmanager;
 import android.support.v7.widget.RecyclerView;
 
 /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
 public class CenterScrollListener extends RecyclerView.OnScrollListener {

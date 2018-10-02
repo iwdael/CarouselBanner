@@ -11,9 +11,9 @@ import com.hacknife.carouselbanner.viewholder.CarouselViewHolder;
 import java.util.List;
 
 /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
 public class CarouselAdapter extends BaseBannerAdapter<CarouselViewHolder> {

@@ -6,9 +6,9 @@ import com.hacknife.carouselbanner.R;
 import com.hacknife.carouselbanner.base.BaseViewHolder;
 
 /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
 

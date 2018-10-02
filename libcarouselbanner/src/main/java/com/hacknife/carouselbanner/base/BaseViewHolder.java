@@ -8,9 +8,9 @@ import com.hacknife.carouselbanner.interfaces.CarouselImageFactory;
 import com.hacknife.carouselbanner.interfaces.OnCarouselBannerListener;
 
 /**
- * author  : Black Chopper
+ * author  : Hacknife
  * e-mail  : 4884280@qq.com
- * github  : http://github.com/BlackChopper
+ * github  : http://github.com/hacknife
  * project : CarouselBanner
  */
 
