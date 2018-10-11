@@ -1,15 +1,14 @@
 # CarouselBanner [![](https://jitpack.io/v/hacknife/carouselbanner.svg)](https://jitpack.io/#hacknife/carouselbanner)
 CarouselBanner 是一款展示图片或者广告的控件。它使用简单，不依赖其他第三方框架，而且把图片加载的过程通过接口的方式让使用者自行实现。
-## 使用说明
-CarouselBanner可以设置滚动的方向，例如水平和垂直，也可以设置滚动的速度，滚动间隔时间，以及指示器的位置。CarouselBanner是普通的轮播控件，如果你想使用带有放缩效果的轮播控件，请使用CoolCarouselBanner。[English](https://github.com/hacknife/CarouselBanner/blob/master/README.md)
-CarouselBanner
 <br>
 ![Image Text](https://github.com/hacknife/CarouselBanner/blob/master/CarouselBanner.gif)
 <br><br>
-CoolCarouselBanner
-<br>
 ![Image Text](https://github.com/hacknife/CarouselBanner/blob/master/CoolCarouselBanner.gif)
 <br>
+
+## 使用说明
+CarouselBanner可以设置滚动的方向，例如水平和垂直，也可以设置滚动的速度，滚动间隔时间，以及指示器的位置。CarouselBanner是普通的轮播控件，如果你想使用带有放缩效果的轮播控件，请使用CoolCarouselBanner。[English](https://github.com/hacknife/CarouselBanner/blob/master/README.md)
+
 ### 代码示例
 使用者需要实现图片加载的过程。
 ```Java
