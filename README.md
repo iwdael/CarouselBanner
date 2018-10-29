@@ -1,5 +1,5 @@
 # CarouselBanner
-[![](https://img.shields.io/badge/platform-android-orange.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/language-java-yellow.svg)](https://github.com/hacknife) [![](https://jitpack.io/v/hacknife/carouselbanner.svg)](https://jitpack.io/#hacknife/carouselbanner)<br/>
+[![](https://img.shields.io/badge/platform-android-orange.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/language-java-yellow.svg)](https://github.com/hacknife) [![](https://jitpack.io/v/hacknife/carouselbanner.svg)](https://jitpack.io/#hacknife/carouselbanner) [![](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/hacknife)<br/>
 CarouselBanner 是一款展示图片或者广告的控件。它使用简单，不依赖其他第三方框架，而且把图片加载的过程通过接口的方式让使用者自行实现。
 <br>
 ![Image Text](https://github.com/hacknife/CarouselBanner/blob/master/CarouselBanner.gif)
