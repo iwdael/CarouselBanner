@@ -1,4 +1,5 @@
-# CarouselBanner [![](https://jitpack.io/v/hacknife/carouselbanner.svg)](https://jitpack.io/#hacknife/carouselbanner)
+# CarouselBanner
+[![](https://img.shields.io/badge/platform-android-orange.svg)](https://github.com/hacknife) [![](https://jitpack.io/v/hacknife/carouselbanner.svg)](https://jitpack.io/#hacknife/carouselbanner)
 CarouselBanner 是一款展示图片或者广告的控件。它使用简单，不依赖其他第三方框架，而且把图片加载的过程通过接口的方式让使用者自行实现。
 <br>
 ![Image Text](https://github.com/hacknife/CarouselBanner/blob/master/CarouselBanner.gif)
@@ -68,7 +69,7 @@ CarouselBanner可以设置滚动的方向，例如水平和垂直，也可以设
 ```Java
 	dependencies {
                 ...
-	        compile 'com.github.hacknife:carouselbanner:v1.0.1'
+	        compile 'com.hacknife:carouselbanner:version'
 	}
 ```
 
