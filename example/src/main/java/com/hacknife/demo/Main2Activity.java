@@ -5,10 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.hacknife.carouselbanner.CarouselBanner;
 import com.hacknife.carouselbanner.interfaces.CarouselImageFactory;
 import com.hacknife.carouselbanner.interfaces.OnCarouselBannerListener;
-import com.aliletter.onhttp.OnHttp;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ public class Main2Activity extends AppCompatActivity {
         banner.initBanner(list, new CarouselImageFactory() {
             @Override
             public void onLoadFactory(String url, ImageView view) {
-                OnHttp.imageLoader().url(url).view(view).build();
+                Glide.with(Main2Activity.this).load(url).into(view);
             }
         }, new OnCarouselBannerListener() {
             @Override
@@ -49,7 +49,7 @@ public class Main2Activity extends AppCompatActivity {
         banner2.initBanner(list, new CarouselImageFactory() {
             @Override
             public void onLoadFactory(String url, ImageView view) {
-                OnHttp.imageLoader().url(url).view(view).build();
+                Glide.with(Main2Activity.this).load(url).into(view);
             }
         });
     }

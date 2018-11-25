@@ -183,22 +183,11 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
 
     protected abstract A getAdapter(List<String> list, CarouselImageFactory factory, OnCarouselBannerListener onBannerItemClickListener);
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
     public void setIndicatorInterval(int millisecond) {
         this.autoPlayDuration = millisecond;
     }
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     protected void setPlaying(boolean playing) {
         if (isAutoPlaying && hasInit) {
             if (!isPlaying && playing && adapter != null && adapter.getItemCount() > 2) {
@@ -211,12 +200,6 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
         }
     }
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
     public void setAutoPlaying(boolean isAutoPlaying) {
         this.isAutoPlaying = isAutoPlaying;
         setPlaying(this.isAutoPlaying);
@@ -235,16 +218,11 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
         this.onBannerItemClickListener = onBannerItemClickListener;
     }
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public void initBanner(@NonNull List<String> newList, CarouselImageFactory factory, OnCarouselBannerListener onBannerItemClickListener) {
         //解决recyclerView嵌套问题
         if (compareListDifferent(newList, tempUrlList)) {
-            this.onBannerItemClickListener = (onBannerItemClickListener==null? this.onBannerItemClickListener:onBannerItemClickListener);
+            this.onBannerItemClickListener = (onBannerItemClickListener == null ? this.onBannerItemClickListener : onBannerItemClickListener);
             hasInit = false;
             setVisibility(VISIBLE);
             setPlaying(false);
@@ -269,15 +247,11 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
         }
     }
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public void initBanner(@NonNull List<String> newList, CarouselImageFactory factory) {
         initBanner(newList, factory, null);
     }
+
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
@@ -344,11 +318,11 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     }
 
     /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+     * author  : Hacknife
+     * e-mail  : 4884280@qq.com
+     * github  : http://github.com/hacknife
+     * project : CarouselBanner
+     */
     protected class IndicatorAdapter extends RecyclerView.Adapter {
 
         int currentPosition = 0;
@@ -384,17 +358,17 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
 
 
     /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+     * author  : Hacknife
+     * e-mail  : 4884280@qq.com
+     * github  : http://github.com/hacknife
+     * project : CarouselBanner
+     */
     protected void refreshIndicator() {
         if (showIndicator && bannerSize > 1) {
             indicatorAdapter.setPosition(currentIndex % bannerSize);
             indicatorAdapter.notifyDataSetChanged();
         }
-        if (onBannerItemClickListener!=null)
+        if (onBannerItemClickListener != null)
             onBannerItemClickListener.onItemChange(currentIndex % bannerSize);
     }
 
@@ -404,11 +378,11 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     }
 
     /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+     * author  : Hacknife
+     * e-mail  : 4884280@qq.com
+     * github  : http://github.com/hacknife
+     * project : CarouselBanner
+     */
     protected int getColor(@ColorRes int color) {
         return ContextCompat.getColor(getContext(), color);
     }

@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!--<com.aliletter.carouselbannar.CarouselBanner-->
 
     <com.hacknife.carouselbanner.CoolCarouselBanner
         android:id="@+id/banner"
@@ -18,7 +17,6 @@
         app:orientation="horizontal"
         app:speedPerPixelMillisecond="0.8" />
 
-    <!--app:orientation="horizontal" />-->
 
 
     <com.hacknife.carouselbanner.CoolCarouselBanner

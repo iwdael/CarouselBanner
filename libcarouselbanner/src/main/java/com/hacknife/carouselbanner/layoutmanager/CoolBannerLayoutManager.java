@@ -36,36 +36,16 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
 
     private int mSpaceInOther;
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     private float mOffset;
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     private OrientationHelper mOrientationHelper;
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     private boolean mSmoothScrollbarEnabled = true;
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     private int mPendingScrollPosition = NO_POSITION;
 
 
@@ -93,23 +73,12 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     }
 
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
     private float setInterval() {
         return mDecoratedMeasurement * ((1.2f - 1) / 2 + 1) + itemSpace;
     }
 
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     private float calculateScale(float x) {
         float deltaX = Math.abs(x - (mOrientationHelper.getTotalSpace() - mDecoratedMeasurement) / 2f);
         float diff = 0f;
@@ -117,12 +86,7 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
         return (SCALE_RATE - 1f) / mDecoratedMeasurement * diff + 1;
     }
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     private float setViewElevation(View itemView, float targetOffset) {
         return 0;
     }
@@ -134,44 +98,24 @@ public class CoolBannerLayoutManager extends RecyclerView.LayoutManager implemen
     }
 
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     @Override
     public boolean canScrollHorizontally() {
         return mOrientation == HORIZONTAL;
     }
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     @Override
     public boolean canScrollVertically() {
         return mOrientation == VERTICAL;
     }
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     int getOrientation() {
         return mOrientation;
     }
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     void setOrientation(int orientation) {
         if (orientation != HORIZONTAL && orientation != VERTICAL) {
             throw new IllegalArgumentException("invalid orientation:" + orientation);

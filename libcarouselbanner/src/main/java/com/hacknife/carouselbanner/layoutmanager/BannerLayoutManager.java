@@ -18,7 +18,7 @@ import android.util.DisplayMetrics;
 
 public class BannerLayoutManager extends LinearLayoutManager {
 
-    private   float speedPerPixelMillisecond;
+    private float speedPerPixelMillisecond;
 
     public BannerLayoutManager(Context context) {
         super(context);
@@ -38,8 +38,7 @@ public class BannerLayoutManager extends LinearLayoutManager {
 
     @Override
     public void smoothScrollToPosition(RecyclerView recyclerView, RecyclerView.State state, int position) {
-        CenterSmoothScroller centerSmoothScroller =
-                new CenterSmoothScroller(recyclerView.getContext());
+        CenterSmoothScroller centerSmoothScroller = new CenterSmoothScroller(recyclerView.getContext());
         centerSmoothScroller.setTargetPosition(position);
         startSmoothScroll(centerSmoothScroller);
     }

@@ -46,144 +46,60 @@ public abstract class OrientationHelper {
         mLayoutManager = layoutManager;
     }
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public void onLayoutComplete() {
         mLastTotalSpace = getTotalSpace();
     }
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public int getTotalSpaceChange() {
         return INVALID_SIZE == mLastTotalSpace ? 0 : getTotalSpace() - mLastTotalSpace;
     }
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public abstract int getDecoratedStart(View view);
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
+
     public abstract int getDecoratedEnd(View view);
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public abstract int getTransformedEndWithDecoration(View view);
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public abstract int getTransformedStartWithDecoration(View view);
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public abstract int getDecoratedMeasurement(View view);
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public abstract int getDecoratedMeasurementInOther(View view);
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public abstract int getStartAfterPadding();
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public abstract int getEndAfterPadding();
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public abstract int getEnd();
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public abstract int getTotalSpace();
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public abstract int getTotalSpaceInOther();
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public abstract int getEndPadding();
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public abstract int getMode();
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public abstract int getModeInOther();
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public static OrientationHelper createOrientationHelper(
             RecyclerView.LayoutManager layoutManager, int orientation) {
         switch (orientation) {
@@ -195,12 +111,7 @@ public abstract class OrientationHelper {
         throw new IllegalArgumentException("invalid orientation");
     }
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public static OrientationHelper createHorizontalHelper(
             RecyclerView.LayoutManager layoutManager) {
         return new OrientationHelper(layoutManager) {
@@ -289,12 +200,7 @@ public abstract class OrientationHelper {
         };
     }
 
-    /**
- * author  : Hacknife
- * e-mail  : 4884280@qq.com
- * github  : http://github.com/hacknife
- * project : CarouselBanner
- */
+
     public static OrientationHelper createVerticalHelper(RecyclerView.LayoutManager layoutManager) {
         return new OrientationHelper(layoutManager) {
             @Override

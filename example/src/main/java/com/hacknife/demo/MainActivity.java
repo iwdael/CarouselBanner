@@ -6,9 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-
-import com.aliletter.onhttp.OnHttp;
+import com.bumptech.glide.Glide;
 import com.hacknife.carouselbanner.CoolCarouselBanner;
 import com.hacknife.carouselbanner.interfaces.CarouselImageFactory;
 import com.hacknife.carouselbanner.interfaces.OnCarouselBannerListener;
@@ -29,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         banner = findViewById(R.id.banner);
         banner2 = findViewById(R.id.banner2);
         List<String> list = new ArrayList<>();
-        OnHttp.initDefault(getApplicationContext());
         list.add("http://g.hiphotos.baidu.com/image/pic/item/b17eca8065380cd78775def0ab44ad3459828147.jpg");
         list.add("http://f.hiphotos.baidu.com/image/pic/item/a08b87d6277f9e2faa2048151530e924b899f392.jpg");
         list.add("http://b.hiphotos.baidu.com/image/pic/item/03087bf40ad162d923621d011bdfa9ec8a13cd1b.jpg");
@@ -39,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         banner.initBanner(list, new CarouselImageFactory() {
             @Override
             public void onLoadFactory(String url, ImageView view) {
-                OnHttp.imageLoader().url(url).view(view).defaultId(R.mipmap.ic_launcher).build();
+                Glide.with(MainActivity.this).load(url).into(view);
             }
         }, new OnCarouselBannerListener() {
             @Override
@@ -57,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         banner2.initBanner(list, new CarouselImageFactory() {
             @Override
             public void onLoadFactory(String url, ImageView view) {
-                OnHttp.imageLoader().url(url).view(view).defaultId(R.mipmap.ic_launcher).build();
+                Glide.with(MainActivity.this).load(url).into(view);
             }
         });
 

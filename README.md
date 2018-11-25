@@ -1,5 +1,5 @@
 # CarouselBanner
-[![](https://img.shields.io/badge/platform-android-orange.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/language-java-yellow.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/jcenter-1.0.7-brightgreen.svg)](https://jcenter.bintray.com/com/hacknife/carouselbanner) [![](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/license-apache--2.0-green.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/api-19+-green.svg)](https://github.com/hacknife)<br/><br/>
+[![](https://img.shields.io/badge/platform-android-orange.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/language-java-yellow.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/JCenter-1.0.8-brightgreen.svg)](https://jcenter.bintray.com/com/hacknife/carouselbanner) [![](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/license-apache--2.0-green.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/api-19+-green.svg)](https://github.com/hacknife)<br/><br/>
 CarouselBanner 是一款展示图片或者广告的控件。它使用简单，不依赖其他第三方框架，而且把图片加载的过程通过接口的方式让使用者自行实现。
 <br>
 ![Image Text](https://github.com/hacknife/CarouselBanner/blob/master/CarouselBanner.gif)
@@ -57,7 +57,7 @@ CarouselBanner可以设置滚动的方向，例如水平和垂直，也可以设
 ```Java
 	dependencies {
                 ...
-	        compile 'com.hacknife:carouselbanner:1.0.7'
+	        compile 'com.hacknife:carouselbanner:1.0.8'
 	}
 ```
 
