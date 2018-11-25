@@ -30,7 +30,7 @@ publish{
     userOrg = 'hacknife'
     groupId = 'com.hacknife'
     artifactId = 'carouselbanner'
-    publishVersion = '1.0.6'
+    publishVersion = '1.0.8'
     desc = ''
     website = 'https://github.com/hacknife/carouselbanner'
 }
