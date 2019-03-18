@@ -4,8 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.hacknife.carouselbanner.Baner;
-import com.hacknife.carouselbanner.interfaces.CarouselImageFactory;
+import com.hacknife.carouselbanner.Banner;
 import com.hacknife.carouselbanner.interfaces.OnCarouselItemClickListener;
 
 /**
@@ -23,7 +22,7 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void bindData(final String url, final int position, final OnCarouselItemClickListener onClickListener) {
-        Baner.factory().onLoadFactory(url, imageView);
+        Banner.factory().onLoadFactory(url, imageView);
         if (onClickListener != null) {
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -3,23 +3,17 @@ package com.hacknife.demo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.hacknife.carouselbanner.Baner;
+import com.hacknife.carouselbanner.Banner;
 import com.hacknife.carouselbanner.CoolCarouselBanner;
-import com.hacknife.carouselbanner.interfaces.CarouselImageFactory;
 import com.hacknife.carouselbanner.interfaces.OnCarouselItemChangeListener;
 import com.hacknife.carouselbanner.interfaces.OnCarouselItemClickListener;
 
 
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.crypto.Mac;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         banner = findViewById(R.id.banner);
         banner2 = findViewById(R.id.banner2);
         List<String> list = new ArrayList<>();
-        Baner.init(new ImageFactory());
+        Banner.init(new ImageFactory());
         list.add("http://g.hiphotos.baidu.com/image/pic/item/b17eca8065380cd78775def0ab44ad3459828147.jpg");
         list.add("http://f.hiphotos.baidu.com/image/pic/item/a08b87d6277f9e2faa2048151530e924b899f392.jpg");
         list.add("http://b.hiphotos.baidu.com/image/pic/item/03087bf40ad162d923621d011bdfa9ec8a13cd1b.jpg");
