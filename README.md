@@ -52,7 +52,7 @@ Banner.init(new ImageFactory());
 ```Java
 	dependencies {
                 ...
-	        compile 'com.hacknife:carouselbanner:1.0.9'
+	        implementation 'com.hacknife:carouselbanner:1.0.9'
 	}
 ```
 
