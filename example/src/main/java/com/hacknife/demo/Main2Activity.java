@@ -35,13 +35,13 @@ public class Main2Activity extends AppCompatActivity {
         banner.setOnCarouselItemChangeListener(new OnCarouselItemChangeListener() {
             @Override
             public void onItemChange(int position) {
-                Toast.makeText(Main2Activity.this, String.valueOf(position), Toast.LENGTH_LONG).show();
+//                Toast.makeText(Main2Activity.this, String.valueOf(position), Toast.LENGTH_LONG).show();
             }
         });
         banner.setOnCarouselItemClickListener(new OnCarouselItemClickListener() {
             @Override
             public void onItemClick(int position, String url) {
-                Toast.makeText(Main2Activity.this, String.valueOf(url), Toast.LENGTH_LONG).show();
+                Toast.makeText(Main2Activity.this, url, Toast.LENGTH_LONG).show();
             }
         });
         banner2.initBanner(list);
