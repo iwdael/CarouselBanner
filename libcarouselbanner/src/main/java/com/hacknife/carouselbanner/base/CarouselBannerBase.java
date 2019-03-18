@@ -26,7 +26,8 @@ import android.widget.ImageView;
 
 import com.hacknife.carouselbanner.R;
 import com.hacknife.carouselbanner.interfaces.CarouselImageFactory;
-import com.hacknife.carouselbanner.interfaces.OnCarouselBannerListener;
+import com.hacknife.carouselbanner.interfaces.OnCarouselItemChangeListener;
+import com.hacknife.carouselbanner.interfaces.OnCarouselItemClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,7 +64,8 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     protected boolean isAutoPlaying;
     protected List<String> tempUrlList = new ArrayList<>();
 
-    protected OnCarouselBannerListener onBannerItemClickListener;
+    protected OnCarouselItemClickListener onBannerItemClickListener;
+    protected OnCarouselItemChangeListener onCarouselItemChangeListener;
 
 
     protected Handler mHandler = new Handler(new Handler.Callback() {
@@ -181,7 +183,7 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
 
     protected abstract L getLayoutManager(Context context, int orientation);
 
-    protected abstract A getAdapter(List<String> list, CarouselImageFactory factory, OnCarouselBannerListener onBannerItemClickListener);
+    protected abstract A getAdapter(List<String> list, OnCarouselItemClickListener onBannerItemClickListener);
 
     public void setIndicatorInterval(int millisecond) {
         this.autoPlayDuration = millisecond;
@@ -214,19 +216,21 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
         indicatorContainer.setVisibility(showIndicator ? VISIBLE : GONE);
     }
 
-    public void setOnBannerItemClickListener(OnCarouselBannerListener onBannerItemClickListener) {
+    public void setOnCarouselItemClickListener(OnCarouselItemClickListener onBannerItemClickListener) {
         this.onBannerItemClickListener = onBannerItemClickListener;
     }
 
+    public void setOnCarouselItemChangeListener(OnCarouselItemChangeListener onCarouselItemChangeListener) {
+        this.onCarouselItemChangeListener = onCarouselItemChangeListener;
+    }
 
-    public void initBanner(@NonNull List<String> newList, CarouselImageFactory factory, OnCarouselBannerListener onBannerItemClickListener) {
+    public void initBanner(List<String> newList) {
         //解决recyclerView嵌套问题
         if (compareListDifferent(newList, tempUrlList)) {
-            this.onBannerItemClickListener = (onBannerItemClickListener == null ? this.onBannerItemClickListener : onBannerItemClickListener);
             hasInit = false;
             setVisibility(VISIBLE);
             setPlaying(false);
-            adapter = getAdapter(newList, factory, this.onBannerItemClickListener);
+            adapter = getAdapter(newList, this.onBannerItemClickListener);
             mRecyclerView.setAdapter(adapter);
             tempUrlList = newList;
             bannerSize = tempUrlList.size();
@@ -248,9 +252,7 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
     }
 
 
-    public void initBanner(@NonNull List<String> newList, CarouselImageFactory factory) {
-        initBanner(newList, factory, null);
-    }
+
 
 
     @Override
@@ -368,8 +370,8 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
             indicatorAdapter.setPosition(currentIndex % bannerSize);
             indicatorAdapter.notifyDataSetChanged();
         }
-        if (onBannerItemClickListener != null)
-            onBannerItemClickListener.onItemChange(currentIndex % bannerSize);
+        if (onCarouselItemChangeListener != null)
+            onCarouselItemChangeListener.onItemChange(currentIndex % bannerSize);
     }
 
 

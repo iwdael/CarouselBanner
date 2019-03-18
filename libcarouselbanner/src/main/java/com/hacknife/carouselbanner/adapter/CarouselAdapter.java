@@ -5,7 +5,7 @@ import android.widget.ImageView;
 
 import com.hacknife.carouselbanner.base.BaseBannerAdapter;
 import com.hacknife.carouselbanner.interfaces.CarouselImageFactory;
-import com.hacknife.carouselbanner.interfaces.OnCarouselBannerListener;
+import com.hacknife.carouselbanner.interfaces.OnCarouselItemClickListener;
 import com.hacknife.carouselbanner.viewholder.CarouselViewHolder;
 
 import java.util.List;
@@ -18,8 +18,8 @@ import java.util.List;
  */
 public class CarouselAdapter extends BaseBannerAdapter<CarouselViewHolder> {
 
-    public CarouselAdapter(List<String> urlList, CarouselImageFactory factory, OnCarouselBannerListener onBannerItemClickListener) {
-        super(urlList, factory, onBannerItemClickListener);
+    public CarouselAdapter(List<String> urlList, OnCarouselItemClickListener onBannerItemClickListener) {
+        super(urlList, onBannerItemClickListener);
     }
 
     @Override

@@ -7,9 +7,8 @@ package com.hacknife.carouselbanner.interfaces;
  * project : CarouselBanner
  */
 
-public interface OnCarouselBannerListener {
+public interface OnCarouselItemClickListener {
 
     void onItemClick(int position, String url);
-    void onItemChange(int position);
 
 }

@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import com.hacknife.carouselbanner.adapter.CoolCarouselAdapter;
 import com.hacknife.carouselbanner.base.CarouselBannerBase;
 import com.hacknife.carouselbanner.interfaces.CarouselImageFactory;
-import com.hacknife.carouselbanner.interfaces.OnCarouselBannerListener;
+import com.hacknife.carouselbanner.interfaces.OnCarouselItemClickListener;
 import com.hacknife.carouselbanner.layoutmanager.CoolBannerLayoutManager;
 
 import java.util.List;
@@ -52,8 +52,8 @@ public class CoolCarouselBanner extends CarouselBannerBase<CoolBannerLayoutManag
     }
 
     @Override
-    protected CoolCarouselAdapter getAdapter(List<String> list, CarouselImageFactory factory, OnCarouselBannerListener onBannerItemClickListener) {
-        return new CoolCarouselAdapter(list, factory, onBannerItemClickListener);
+    protected CoolCarouselAdapter getAdapter(List<String> list,   OnCarouselItemClickListener onBannerItemClickListener) {
+        return new CoolCarouselAdapter(list,   onBannerItemClickListener);
     }
 
 

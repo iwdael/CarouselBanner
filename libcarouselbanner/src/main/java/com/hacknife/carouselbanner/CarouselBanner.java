@@ -4,10 +4,11 @@ import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
+
 import com.hacknife.carouselbanner.adapter.CarouselAdapter;
 import com.hacknife.carouselbanner.base.CarouselBannerBase;
 import com.hacknife.carouselbanner.interfaces.CarouselImageFactory;
-import com.hacknife.carouselbanner.interfaces.OnCarouselBannerListener;
+import com.hacknife.carouselbanner.interfaces.OnCarouselItemClickListener;
 import com.hacknife.carouselbanner.layoutmanager.BannerLayoutManager;
 
 import java.util.List;
@@ -68,12 +69,12 @@ public class CarouselBanner extends CarouselBannerBase<BannerLayoutManager, Caro
 
     @Override
     protected BannerLayoutManager getLayoutManager(Context context, int orientation) {
-        return new BannerLayoutManager(context, orientation, false,speedPerPixelMillisecond);
+        return new BannerLayoutManager(context, orientation, false, speedPerPixelMillisecond);
     }
 
     @Override
-    protected CarouselAdapter getAdapter(List<String> list, CarouselImageFactory factory, OnCarouselBannerListener onBannerItemClickListener) {
-        return new CarouselAdapter(list, factory, onBannerItemClickListener);
+    protected CarouselAdapter getAdapter(List<String> list, OnCarouselItemClickListener onBannerItemClickListener) {
+        return new CarouselAdapter(list, onBannerItemClickListener);
     }
 
 
