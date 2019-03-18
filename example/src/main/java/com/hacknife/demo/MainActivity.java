@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         list.add("http://e.hiphotos.baidu.com/image/pic/item/b7fd5266d0160924d76acf06de0735fae6cd345b.jpg");
         list.add("http://a.hiphotos.baidu.com/image/pic/item/c83d70cf3bc79f3d785ce62db0a1cd11728b2969.jpg");
         list.add("http://f.hiphotos.baidu.com/image/pic/item/fcfaaf51f3deb48fd146bfc3fa1f3a292df578fb.jpg");
-        banner.initBanner(list);
+
         banner.setOnCarouselItemChangeListener(new OnCarouselItemChangeListener() {
             @Override
             public void onItemChange(int position) {
@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, url, Toast.LENGTH_LONG).show();
             }
         });
+        banner.initBanner(list);
         banner2.initBanner(list);
 
     }

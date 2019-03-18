@@ -2,20 +2,23 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://D:\Android Project\CarouselBanner\CarouselBannar.iml" filepath="D:\Android Project\CarouselBanner\CarouselBannar.iml" />
-      <module fileurl="file://C:\Users\Hacknife\Desktop\carouselbanner\CarouselBanner.iml" filepath="C:\Users\Hacknife\Desktop\carouselbanner\CarouselBanner.iml" />
-      <module fileurl="file://C:\Users\Black Chopper\Desktop\CarouselBanner\CarouselBanner.iml" filepath="C:\Users\Black Chopper\Desktop\CarouselBanner\CarouselBanner.iml" />
-      <module fileurl="file://C:\Users\alile\Desktop\CarouselBannar\example\app.iml" filepath="C:\Users\alile\Desktop\CarouselBannar\example\app.iml" />
+      <module fileurl="file://D:/Android Project/CarouselBanner/CarouselBannar.iml" filepath="D:/Android Project/CarouselBanner/CarouselBannar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CarouselBanner.iml" filepath="$PROJECT_DIR$/CarouselBanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../Black Chopper/Desktop/CarouselBanner/CarouselBanner.iml" filepath="$PROJECT_DIR$/../../../Black Chopper/Desktop/CarouselBanner/CarouselBanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CarouselBanner.iml" filepath="$PROJECT_DIR$/CarouselBanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../alile/Desktop/CarouselBannar/example/app.iml" filepath="$PROJECT_DIR$/../../../alile/Desktop/CarouselBannar/example/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/carouselbanner.iml" filepath="$PROJECT_DIR$/carouselbanner.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
-      <module fileurl="file://C:\Users\Black Chopper\Desktop\CarouselBanner\example\example.iml" filepath="C:\Users\Black Chopper\Desktop\CarouselBanner\example\example.iml" />
-      <module fileurl="file://D:\Android Project\CarouselBanner\example\example.iml" filepath="D:\Android Project\CarouselBanner\example\example.iml" />
-      <module fileurl="file://C:\Users\Hacknife\Desktop\carouselbanner\example\example.iml" filepath="C:\Users\Hacknife\Desktop\carouselbanner\example\example.iml" />
-      <module fileurl="file://C:\Users\absurd\Desktop\CarouselBannar\libcarouselbanner\libcarouselbannar.iml" filepath="C:\Users\absurd\Desktop\CarouselBannar\libcarouselbanner\libcarouselbannar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
+      <module fileurl="file://D:/Android Project/CarouselBanner/example/example.iml" filepath="D:/Android Project/CarouselBanner/example/example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../Black Chopper/Desktop/CarouselBanner/example/example.iml" filepath="$PROJECT_DIR$/../../../Black Chopper/Desktop/CarouselBanner/example/example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../absurd/Desktop/CarouselBannar/libcarouselbanner/libcarouselbannar.iml" filepath="$PROJECT_DIR$/../../../absurd/Desktop/CarouselBannar/libcarouselbanner/libcarouselbannar.iml" />
       <module fileurl="file://$PROJECT_DIR$/libcarouselbanner/libcarouselbanner.iml" filepath="$PROJECT_DIR$/libcarouselbanner/libcarouselbanner.iml" />
-      <module fileurl="file://C:\Users\Black Chopper\Desktop\CarouselBanner\libcarouselbanner\libcarouselbanner.iml" filepath="C:\Users\Black Chopper\Desktop\CarouselBanner\libcarouselbanner\libcarouselbanner.iml" />
-      <module fileurl="file://D:\Android Project\CarouselBanner\libcarouselbanner\libcarouselbanner.iml" filepath="D:\Android Project\CarouselBanner\libcarouselbanner\libcarouselbanner.iml" />
-      <module fileurl="file://C:\Users\Hacknife\Desktop\carouselbanner\libcarouselbanner\libcarouselbanner.iml" filepath="C:\Users\Hacknife\Desktop\carouselbanner\libcarouselbanner\libcarouselbanner.iml" />
+      <module fileurl="file://D:/Android Project/CarouselBanner/libcarouselbanner/libcarouselbanner.iml" filepath="D:/Android Project/CarouselBanner/libcarouselbanner/libcarouselbanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libcarouselbanner/libcarouselbanner.iml" filepath="$PROJECT_DIR$/libcarouselbanner/libcarouselbanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libcarouselbanner/libcarouselbanner.iml" filepath="$PROJECT_DIR$/libcarouselbanner/libcarouselbanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../Black Chopper/Desktop/CarouselBanner/libcarouselbanner/libcarouselbanner.iml" filepath="$PROJECT_DIR$/../../../Black Chopper/Desktop/CarouselBanner/libcarouselbanner/libcarouselbanner.iml" />
     </modules>
   </component>
 </project>
