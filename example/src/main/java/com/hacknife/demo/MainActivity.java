@@ -19,6 +19,8 @@ import com.hacknife.carouselbanner.interfaces.OnCarouselItemClickListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.crypto.Mac;
+
 public class MainActivity extends AppCompatActivity {
 
     CoolCarouselBanner banner, banner2;
@@ -42,13 +44,13 @@ public class MainActivity extends AppCompatActivity {
         banner.setOnCarouselItemChangeListener(new OnCarouselItemChangeListener() {
             @Override
             public void onItemChange(int position) {
-                Log.v("CoolCarouselBanner", ">>>>>>>>>>>>>>>" + position);
+                Toast.makeText(MainActivity.this, String.valueOf(position), Toast.LENGTH_LONG).show();
             }
         });
         banner.setOnCarouselItemClickListener(new OnCarouselItemClickListener() {
             @Override
             public void onItemClick(int position, String url) {
-                Log.v("CoolCarouselBanner", ">>>>>>>" + position + ">>>>>>>>" + url);
+                Toast.makeText(MainActivity.this, String.valueOf(url), Toast.LENGTH_LONG).show();
             }
         });
         banner2.initBanner(list);

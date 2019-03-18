@@ -8,6 +8,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.hacknife.carouselbanner.CarouselBanner;
 import com.hacknife.carouselbanner.interfaces.CarouselImageFactory;
+import com.hacknife.carouselbanner.interfaces.OnCarouselItemChangeListener;
 import com.hacknife.carouselbanner.interfaces.OnCarouselItemClickListener;
 
 import java.util.ArrayList;
@@ -31,6 +32,18 @@ public class Main2Activity extends AppCompatActivity {
         list.add("http://a.hiphotos.baidu.com/image/pic/item/c83d70cf3bc79f3d785ce62db0a1cd11728b2969.jpg");
         list.add("http://f.hiphotos.baidu.com/image/pic/item/fcfaaf51f3deb48fd146bfc3fa1f3a292df578fb.jpg");
         banner.initBanner(list);
+        banner.setOnCarouselItemChangeListener(new OnCarouselItemChangeListener() {
+            @Override
+            public void onItemChange(int position) {
+                Toast.makeText(Main2Activity.this, String.valueOf(position), Toast.LENGTH_LONG).show();
+            }
+        });
+        banner.setOnCarouselItemClickListener(new OnCarouselItemClickListener() {
+            @Override
+            public void onItemClick(int position, String url) {
+                Toast.makeText(Main2Activity.this, String.valueOf(url), Toast.LENGTH_LONG).show();
+            }
+        });
         banner2.initBanner(list);
     }
 
