@@ -75,7 +75,6 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
                 mRecyclerView.smoothScrollToPosition(++currentIndex);
                 refreshIndicator();
                 mHandler.sendEmptyMessageDelayed(WHAT_AUTO_PLAY, autoPlayDuration);
-
             }
             return false;
         }
@@ -239,12 +238,12 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
                 currentIndex = bannerSize * 10000;
                 mRecyclerView.scrollToPosition(currentIndex);
                 indicatorAdapter.notifyDataSetChanged();
-                setPlaying(true);
             } else {
                 indicatorContainer.setVisibility(GONE);
                 currentIndex = 0;
             }
             hasInit = true;
+            setPlaying(true);
         }
         if (!showIndicator) {
             indicatorContainer.setVisibility(GONE);
@@ -316,12 +315,7 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
         }
     }
 
-    /**
-     * author  : Hacknife
-     * e-mail  : 4884280@qq.com
-     * github  : http://github.com/hacknife
-     * project : CarouselBanner
-     */
+
     protected class IndicatorAdapter extends RecyclerView.Adapter {
 
         int currentPosition = 0;
