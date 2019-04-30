@@ -246,13 +246,13 @@ public abstract class CarouselBannerBase<L extends RecyclerView.LayoutManager, A
             }
             hasInit = true;
         }
+        if (hasInit) {
+            setAutoPlaying(true);
+        }
         if (!showIndicator) {
             indicatorContainer.setVisibility(GONE);
         }
     }
-
-
-
 
 
     @Override
