@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
 
-    <com.hacknife.carouselbanner.CoolCarouselBanner
+    <com.iwdael.carouselbanner.CoolCarouselBanner
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -18,15 +18,12 @@
         app:speedPerPixelMillisecond="0.8" />
 
 
-
-    <com.hacknife.carouselbanner.CoolCarouselBanner
+    <com.iwdael.carouselbanner.CoolCarouselBanner
         android:id="@+id/banner2"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="20dp"
-        app:orientation="vertical"
-
-        />
+        app:orientation="vertical" />
 
     <Button
         android:layout_width="wrap_content"

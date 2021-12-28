@@ -1,1 +1,3 @@
-include ':example', ':libcarouselbanner'
+include ':carouselbanner'
+include ':example'
+rootProject.name = "CarouselBanner"

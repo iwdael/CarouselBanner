@@ -1,10 +1,16 @@
 # CarouselBanner
-[![](https://img.shields.io/badge/platform-android-orange.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/language-java-yellow.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/JCenter-1.1.2-brightgreen.svg)](https://jcenter.bintray.com/com/hacknife/carouselbanner) [![](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/license-apache--2.0-green.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/api-19+-green.svg)](https://github.com/hacknife)<br/><br/>
+![](https://img.shields.io/badge/platform-android-orange.svg)
+![](https://img.shields.io/badge/language-java-yellow.svg)
+![](https://jitpack.io/v/com.iwdael/carouselbanner.svg)
+![](https://img.shields.io/badge/build-passing-brightgreen.svg)
+![](https://img.shields.io/badge/license-apache--2.0-green.svg)
+![](https://img.shields.io/badge/api-19+-green.svg)
+
 CarouselBanner 是一款展示图片或者广告的控件。它使用简单，不依赖其他第三方框架，而且把图片加载的过程通过接口的方式让使用者自行实现。
 <br>
-![Image Text](https://github.com/hacknife/CarouselBanner/blob/master/CarouselBanner.gif)
+![Image Text](screenshot/CarouselBanner.gif)
 <br><br>
-![Image Text](https://github.com/hacknife/CarouselBanner/blob/master/CoolCarouselBanner.gif)
+![Image Text](screenshot/CoolCarouselBanner.gif)
 <br>
 
 ## 使用说明
@@ -26,8 +32,8 @@ Banner.init(new ImageFactory());
 ```
 #### 添加到布局
 ```
-    <!--<com.hacknife.carouselbanner.CarouselBanner-->
-    <com.hacknife.carouselbanner.CoolCarouselBanner
+    <!--<com.iwdael.carouselbanner.CarouselBanner-->
+    <com.iwdael.carouselbanner.CoolCarouselBanner
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -52,11 +58,11 @@ Banner.init(new ImageFactory());
 ```Java
 	dependencies {
                 ...
-	        implementation 'com.hacknife:carouselbanner:1.1.2'
+	        implementation 'com.iwdael:carouselbanner:$version'
 	}
 ```
 
 ## 感谢浏览
 如果你有任何疑问，请加入QQ群，我将竭诚为你解答。欢迎Star和Fork本仓库，当然也欢迎你关注我。
 <br>
-![Image Text](https://github.com/hacknife/CarouselBanner/blob/master/qq_group.png)
+![Image Text](screenshot/qq_group.png)

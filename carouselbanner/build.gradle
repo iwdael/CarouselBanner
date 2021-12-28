@@ -1,32 +1,21 @@
 apply from: './../config.gradle'
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
 android {
     buildToolsVersion buidConfig.buildToolsVersion
     compileSdkVersion buidConfig.compileSdkVersion
-
     defaultConfig {
-        applicationId "com.iwdael.carouselbanner.example"
         minSdkVersion buidConfig.minSdkVersion
         targetSdkVersion buidConfig.targetSdkVersion
         versionCode buidConfig.versionCode
         versionName buidConfig.versionName
     }
-    compileOptions {
-        sourceCompatibility 1.8
-        targetCompatibility 1.8
-    }
-
 }
 
 dependencies {
     implementation dependent.kotlinJdk7
-    implementation dependent.appcompat
-    implementation dependent.constraintlayout
-    implementation dependent.glide
-    implementation project(":carouselbanner")
-    implementation dependent.recyclerview
-    implementation dependent.cardview
+    compileOnly dependent.appcompat
+    compileOnly dependent.recyclerview
+    compileOnly dependent.cardview
 }
